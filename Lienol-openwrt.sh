@@ -1,8 +1,8 @@
 #!/bin/bash
 
-git clone https://github.com/Lienol/openwrt.git openwrt -b 19.07
-git clone https://github.com/Lienol/openwrt-packages.git openwrt-packages -b 19.07
-git clone https://github.com/Lienol/openwrt-luci.git openwrt-luci -b 18.06
-git clone https://github.com/xiaorouji/openwrt-package.git openwrt-package
+svn co https://github.com/Lienol/openwrt/trunk openwrt
+svn co https://github.com/Lienol/openwrt-packages/trunk openwrt-packages
+svn co https://github.com/Lienol/openwrt-luci/trunk openwrt-luci
+svn co https://github.com/xiaorouji/openwrt-package/trunk openwrt-package
 
 exit 0
