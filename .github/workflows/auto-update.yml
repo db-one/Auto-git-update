@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [main,lede-openwrt,Lienol-openwrt]
+        target: [lede-openwrt]  #[main,lede-openwrt,Lienol-openwrt]  
         
     steps:
     - name: Checkout
