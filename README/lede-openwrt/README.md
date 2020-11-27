@@ -1,7 +1,11 @@
-# [大雕和lienol的源码定时备份]
+# [Lean和lienol的源码定时备份]
 
 
-#### 分支[lean]的为lede源码专用，分支[19.07]的为lienol源码专用
+[Lean](https://github.com/coolsnowwolf/lede)
+[ Lienol](https://github.com/Lienol/openwrt )
+[ xiaorouji package](https://github.com/xiaorouji/openwrt-package)
+
+
 
 #### 脚本代码来自 https://github.com/281677160/update-package
 
