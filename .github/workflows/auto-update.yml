@@ -56,7 +56,10 @@ jobs:
         rm -Rf *
         git rm --cache *
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
-    
+
+    - name: SSH远程连接服务器配置固件
+      uses: P3TERX/ssh2actions@v1.0.0
+
     - name: Upload
       env: 
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
