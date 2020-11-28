@@ -33,7 +33,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit-ng
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-cpulimit
-svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zh
+svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zhcn luci-app-wrtbwmon-zh
 svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff
