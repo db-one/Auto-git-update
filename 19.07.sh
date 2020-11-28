@@ -2,12 +2,12 @@
 
 # 2333
 git clone https://github.com/fw876/helloworld luci-app-ssr-plus
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt ssr-plus/pdnsd-alt
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks ssr-plus/microsocks
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks ssr-plus/dns2socks
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs ssr-plus/simple-obfs
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 ssr-plus/redsocks2
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun ssr-plus/kcptun
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt luci-app-ssr-plus/pdnsd-alt
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks luci-app-ssr-plus/microsocks
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks luci-app-ssr-plus/dns2socks
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs luci-app-ssr-plus/simple-obfs
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 luci-app-ssr-plus/redsocks2
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun luci-app-ssr-plus/kcptun
 git clone https://github.com/vernesong/OpenClash.git
 mv -f OpenClash/luci-app-openclash ./luci-app-openclash
 rm -rf OpenClash
