@@ -44,7 +44,7 @@ git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/pymumu/luci-app-smartdns
 git clone https://github.com/esirplayground/luci-app-poweroff
 git clone https://github.com/destan19/OpenAppFilter
-git clone https://github.com/garypang13/luci-app-eqos
+git clone https://github.com/littletao08/luci-app-eqos
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
 
