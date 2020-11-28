@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # 2333
-svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-package/trunk/package passwall
+svn co https://github.com/xiaorouji/openwrt-passwall passwall
+mv -f passwall/luci-app-passwall ./luci-app-passwall
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy passwall/https-dns-proxy
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy passwall/haproxy
-
 svn co https://github.com/fw876/helloworld luci-app-ssr-plus
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 
@@ -16,7 +15,6 @@ svn co https://github.com/Lienol/openwrt-luci/trunk/themes/luci-theme-material
 svn co https://github.com/jerrykuku/luci-theme-argon/branches/18.06 luci-theme-argon
 svn co https://github.com/jerrykuku/luci-app-argon-config
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
-
 svn co https://github.com/sirpdboy/luci-theme-opentopd
 svn co https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 svn co https://github.com/rosywrt/luci-theme-rosy
@@ -41,7 +39,6 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
-
 svn co https://github.com/tty228/luci-app-serverchan
 svn co https://github.com/pymumu/luci-app-smartdns
 svn co https://github.com/esirplayground/luci-app-poweroff

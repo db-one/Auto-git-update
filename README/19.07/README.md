@@ -8,8 +8,8 @@
 #
 
 ### 2333
-###### luci-app-ssr-plus   #shadowsocksR Puls+  出国软件
-###### luci-app-openclash    #openclash 出国软件
+###### luci-app-ssr-plus
+###### luci-app-openclash
 #
 ### 主题
 ###### luci-theme-edge    #主题-edge
