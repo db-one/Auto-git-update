@@ -8,6 +8,7 @@ svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy passwall/hap
 svn co https://github.com/fw876/helloworld/trunk luci-app-ssr-plus
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 
+
 # 主题
 svn co https://github.com/garypang13/luci-theme-edge/branches/18.06 luci-theme-edge
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
@@ -39,7 +40,6 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
-
 svn co https://github.com/tty228/luci-app-serverchan/trunk luci-app-serverchan
 svn co https://github.com/pymumu/luci-app-smartdns/trunk luci-app-smartdns
 svn co https://github.com/esirplayground/luci-app-poweroff/trunk luci-app-poweroff
