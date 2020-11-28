@@ -48,8 +48,10 @@ git clone https://github.com/jerrykuku/node-request
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
 
 rm -rf .svn
-rm -rf ./*/.svn
 rm -rf ./*/.git
+rm -rf ./*/.svn
+rm -rf ./*/*/.svn
+rm -rf ./*/*/.git
 rm -rf ./*/LICENSE
 rm -rf ./*/readme.txt
 rm -f .gitattributes .gitignore
