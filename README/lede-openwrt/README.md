@@ -3,7 +3,7 @@
 
 [Lean](https://github.com/coolsnowwolf/lede)
 [ Lienol](https://github.com/Lienol/openwrt )
-[ xiaorouji package](https://github.com/xiaorouji/openwrt-package)
+[ xiaorouji package](https://github.com/xiaorouji/openwrt-passwall)
 
 
 
