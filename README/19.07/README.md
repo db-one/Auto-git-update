@@ -8,7 +8,6 @@
 #
 
 ### 2333
-###### luci-app-passwall    #passwall 出国软件
 ###### luci-app-ssr-plus   #shadowsocksR Puls+  出国软件
 ###### luci-app-openclash    #openclash 出国软件
 #
@@ -24,7 +23,6 @@
 ###### luci-theme-rosy    #主题-rosy
 #
 ###  插件
-###### luci-app-adguardhome   #adguardhome
 ###### luci-app-netdata   #netdata信息监控
 ###### luci-app-koolddns   #kool论坛的DNS
 ###### luci-app-gost   #GO语言实现的安全隧道
@@ -33,14 +31,9 @@
 ###### luci-app-wrtbwmon-zh   #流量统计，替代luci-app-wrtbwmon，在固件状态栏显示
 ###### luci-app-advanced   #系统高级设置
 ###### lluci-app-autopoweroff   #定时设置，替代luci-app-autoreboot
-###### luci-app-control-timewol   #定时唤醒
-###### luci-app-control-weburl   #网址过滤
-###### luci-app-control-webrestriction   #访问限制
 ###### luci-app-koolproxyR   #广告过滤大师 plus+  ，慎用，不懂的话，打开就没网络了
 ###### luci-app-serverchan    #微信推送
-###### luci-app-smartdns   #smartdns DNS加速
 ###### luci-app-poweroff    #关机（增加关机功能）
-###### luci-app-oaf （OpenAppFilter）  #应用过滤 ，该模块只工作在路由模式， 旁路模式、桥模式不生效，还有和Turbo ACC 网络加速有冲突
 ###### luci-app-eqos    #内网控速 内网IP限速工具
 ###### luci-app-jd-dailybonus    #京东签到
 ###### node-request    #京东签到所需组件
