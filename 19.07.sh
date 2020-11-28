@@ -2,12 +2,12 @@
 
 # 2333
 svn co https://github.com/fw876/helloworld/trunk luci-app-ssr-plus
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt ssr-plus/pdnsd-alt
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks ssr-plus/microsocks
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks ssr-plus/dns2socks
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs ssr-plus/simple-obfs
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 ssr-plus/redsocks2
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun ssr-plus/kcptun
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 
 # 主题
