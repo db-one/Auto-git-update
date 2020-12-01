@@ -8,8 +8,8 @@
 #
 
 ### 2333
+###### helloworld
 ###### luci-app-passwall
-###### luci-app-ssr-plus
 ###### luci-app-openclash
 #
 ### 主题
@@ -27,7 +27,6 @@
 ###### luci-app-adguardhome   #adguardhome
 ###### luci-app-netdata   #netdata信息监控
 ###### luci-app-koolddns   #kool论坛的DNS
-###### luci-app-gost   #GO语言实现的安全隧道
 ###### luci-app-aliddns    #aliddns
 ###### luci-app-cpulimit   #CPU性能限制
 ###### luci-app-wrtbwmon-zh   #流量统计，替代luci-app-wrtbwmon，在固件状态栏显示
@@ -44,6 +43,7 @@
 ###### luci-app-eqos    #内网控速 内网IP限速工具
 ###### luci-app-jd-dailybonus    #京东签到
 ###### node-request    #京东签到所需组件
+###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 
 
 #

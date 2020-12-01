@@ -2,9 +2,9 @@
 
 # 2333
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy passwall/https-dns-proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy passwall/haproxy
-git clone https://github.com/fw876/helloworld luci-app-ssr-plus
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
+git clone https://github.com/fw876/helloworld
 git clone https://github.com/vernesong/OpenClash.git
 mv -f OpenClash/luci-app-openclash ./luci-app-openclash
 rm -rf OpenClash
@@ -26,8 +26,6 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-gost
-svn co https://github.com/kenzok8/openwrt-packages/trunk/gost
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit-ng
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit
@@ -45,11 +43,66 @@ git clone https://github.com/pymumu/luci-app-smartdns
 git clone https://github.com/esirplayground/luci-app-poweroff
 git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/littletao08/luci-app-eqos
+git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
 
-
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
+
+
+# 生成完整目录清单
+cat >> Update2.md <<EOF
+passwall
+https-dns-proxy
+haproxy
+helloworld
+luci-app-openclash
+luci-theme-edge
+luci-theme-atmaterial
+luci-theme-material
+luci-theme-argon
+luci-app-argon-config
+luci-theme-opentomcat
+luci-theme-opentopd
+luci-theme-infinityfreedom
+luci-theme-rosy
+luci-app-adguardhome
+adguardhome
+luci-app-netdata
+netdata
+luci-app-koolddns
+luci-app-aliddns
+cpulimit-ng
+cpulimit
+luci-app-cpulimit
+luci-app-wrtbwmon-zh
+wrtbwmon
+luci-app-advanced
+luci-app-autopoweroff
+luci-app-control-timewol
+luci-app-control-weburl
+luci-app-control-webrestriction
+luci-app-koolproxyR
+luci-app-serverchan
+luci-app-smartdns
+luci-app-poweroff
+luci-app-oaf
+luci-app-eqos
+luci-app-smartinfo
+luci-app-jd-dailybonus
+node-request
+EOF
+
+# 获取所有更新目录并显示，排除MD SH文件
+ls | grep -v '.md' | grep -v '.sh' >> Update.md
+
+# 对比Update.md文件里没有的内容，并生成变量
+FOLDERS=`grep -Fxvf Update.md Update2.md`;echo $FOLDERS
+
+# 判断变量值，如果有效发送微信通知
+if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/${{ secrets.WEIXIN_SCKEY }}.send?text=插件同步失败-18.06-$FOLDERS; fi
+# 删除对比更新目录列表
+rm -rf Update2.md
 
 rm -rf .svn
 rm -rf ./*/.git
