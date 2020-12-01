@@ -90,10 +90,11 @@ ls | grep -v '.md' | grep -v '.sh' >> Update.md
 cat Update.md
 
 # 对比Update.md文件里没有的内容，并生成变量
+echo 缺失包列表
 FOLDERS=`grep -Fxvf Update.md Update2.md`;echo $FOLDERS
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/${{ secrets.WEIXIN_SCKEY }}.send?text=插件同步失败-19.07-$FOLDERS; fi
+if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCKEY.send?text=插件同步失败-19.07-$FOLDERS; fi
 # 删除对比更新目录列表
 rm -rf Update2.md
 
