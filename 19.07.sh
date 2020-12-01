@@ -91,10 +91,10 @@ ls | grep -v 'Update.md' | grep -v '18.06.sh' >> UpdateList.diff
 # 对比Update.md文件里没有的内容，并生成变量
 echo 缺失包列表
 FOLDERS=`grep -Fxvf UpdateList.diff Update.md`;echo $FOLDERS
-echo ${FOLDERS// /}
+FOLDERSX=`echo $FOLDERS |sed 's/--/ /g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCKEY.send?text=插件同步失败-19.07-$FOLDERS; fi
+if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCKEY.send?text=插件同步失败-19.07-$FOLDERSX; fi
 # 删除对比更新目录列表
 rm -rf Update.md
 
