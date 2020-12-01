@@ -91,10 +91,13 @@ luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
+ZZZZZ
+CCCCC
 EOF
 
 # 获取所有更新目录并显示，排除MD SH文件
 ls | grep -v '.md' | grep -v '.sh' >> Update.md
+cat Update.md
 
 # 对比Update.md文件里没有的内容，并生成变量
 FOLDERS=`grep -Fxvf Update.md Update2.md`;echo $FOLDERS
