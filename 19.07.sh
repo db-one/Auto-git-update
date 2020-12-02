@@ -86,7 +86,7 @@ node-request
 EOF
 
 # 获取所有更新目录并显示
-ls | grep -v 'Update.md' | grep -v '18.06.sh' >> UpdateList.md
+ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v '18.06.sh' >> UpdateList.md
 
 # 对比Update.md文件里没有的内容，并生成变量
 echo 缺失包列表
@@ -97,6 +97,7 @@ FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCKEY.send?text=插件同步失败-19.07-$FOLDERSX; fi
 # 删除对比更新目录列表
 rm -rf Update.md
+rm -rf UpdateList.md
 
 rm -rf .svn
 rm -rf ./*/.git
