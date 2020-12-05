@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/coolsnowwolf/lede/ ./
+git clone https://github.com/coolsnowwolf/lede/ ./ -b master
 
 # 生成新的feeds.conf.default
 rm -rf feeds.conf.default

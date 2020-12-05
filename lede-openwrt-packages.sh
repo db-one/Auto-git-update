@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/coolsnowwolf/packages/ ./
+git clone https://github.com/coolsnowwolf/packages/ ./ -b master
 
 rm -rf .svn
 rm -rf ./*/.git

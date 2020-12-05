@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/coolsnowwolf/luci/ ./
+git clone https://github.com/coolsnowwolf/luci/ ./ -b master
 
 rm -rf .svn
 rm -rf ./*/.git

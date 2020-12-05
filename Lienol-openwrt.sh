@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/Lienol/openwrt/ ./
+git clone https://github.com/Lienol/openwrt/ ./ -b 19.07
 
 # 生成新的feeds.conf.default
 rm -rf feeds.conf.default

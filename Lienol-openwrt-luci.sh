@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/Lienol/openwrt-luci/ ./
+git clone https://github.com/Lienol/openwrt-luci/ ./ -b 18.06
 
 rm -rf .svn
 rm -rf ./*/.git
