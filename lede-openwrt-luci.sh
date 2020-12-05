@@ -1,6 +1,6 @@
 #!/bin/bash
 
-svn co https://github.com/coolsnowwolf/luci/trunk ./
+git clone https://github.com/coolsnowwolf/luci/ ./
 
 rm -rf .svn
 rm -rf ./*/.git

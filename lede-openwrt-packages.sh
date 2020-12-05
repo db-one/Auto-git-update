@@ -1,6 +1,6 @@
 #!/bin/bash
 
-svn co https://github.com/coolsnowwolf/packages/trunk ./
+git clone https://github.com/coolsnowwolf/packages/ ./
 
 rm -rf .svn
 rm -rf ./*/.git

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-svn co https://github.com/Lienol/openwrt-luci/trunk ./
+git clone https://github.com/Lienol/openwrt-luci/ ./
 
 rm -rf .svn
 rm -rf ./*/.git

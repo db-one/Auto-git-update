@@ -1,6 +1,6 @@
 #!/bin/bash
 
-svn co https://github.com/coolsnowwolf/lede/trunk ./
+git clone https://github.com/coolsnowwolf/lede/ ./
 
 # 生成新的feeds.conf.default
 rm -rf feeds.conf.default
