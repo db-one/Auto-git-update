@@ -1,4 +1,4 @@
-name: auto-update
+name: 同步源码
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [main,18.06,19.07,lede-openwrt,lede-openwrt-luci,lede-openwrt-packages,Lienol-openwrt,Lienol-openwrt-luci,Lienol-openwrt-packages]  #[main,18.06,19.07,lede-openwrt,lede-openwrt-luci,lede-openwrt-packages,Lienol-openwrt,Lienol-openwrt-luci,Lienol-openwrt-packages]  
+        target: [main,18.06,19.07,lede-openwrt,Lienol-openwrt]  #[main,18.06,19.07,lede-openwrt,Lienol-openwrt]  
 
     steps:
     - name: Checkout
