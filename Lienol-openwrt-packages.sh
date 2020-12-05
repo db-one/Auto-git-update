@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/Lienol/openwrt-packages/trunk ./
+svn co https://github.com/Lienol/openwrt-packages/trunk ./
 
 rm -rf .svn
 rm -rf ./*/.git
