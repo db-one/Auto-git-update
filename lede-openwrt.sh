@@ -6,6 +6,7 @@ git clone  https://github.com/coolsnowwolf/luci feeds/luci
 git clone  https://github.com/fw876/helloworld feeds/helloworld
 
 # 生成新的feeds.conf.default
+rm -rf feeds.conf.default
 cat >> feeds.conf.default <<EOF
 #src-git packages https://github.com/coolsnowwolf/packages
 #src-git luci https://github.com/coolsnowwolf/luci

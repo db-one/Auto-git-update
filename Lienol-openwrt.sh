@@ -6,6 +6,7 @@ git clone https://github.com/Lienol/openwrt-luci feeds/luci -b 18.06
 git clone https://github.com/xiaorouji/openwrt-passwall feeds/passwall
 
 # 生成新的feeds.conf.default
+rm -rf feeds.conf.default
 cat >> feeds.conf.default <<EOF
 #src-git packages https://github.com/Lienol/openwrt-packages.git;19.07
 src-git routing https://git.openwrt.org/feed/routing.git;openwrt-19.07
