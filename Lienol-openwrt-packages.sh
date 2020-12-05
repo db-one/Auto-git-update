@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/Lienol/openwrt-packages/ ./  -b 19.07
+git clone https://github.com/Lienol/openwrt-packages/ ./ -b 19.07
 
 rm -rf .svn
 rm -rf ./*/.git
