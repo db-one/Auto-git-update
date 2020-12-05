@@ -1,9 +1,9 @@
 #!/bin/bash
 
-svn co https://github.com/Lienol/openwrt/trunk openwrt
-svn co https://github.com/Lienol/openwrt-packages/trunk openwrt-packages
-svn co https://github.com/Lienol/openwrt-luci/trunk openwrt-luci
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk passwall
+svn co https://github.com/Lienol/openwrt/trunk ./
+git clone https://github.com/Lienol/openwrt-packages feeds/packages -b 19.07
+git clone https://github.com/Lienol/openwrt-luci feeds/luci -b 18.06
+git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 
 rm -rf .svn
 rm -rf ./*/.git

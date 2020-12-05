@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone  https://github.com/coolsnowwolf/lede ./
+svn co https://github.com/coolsnowwolf/lede/trunk ./
 git clone  https://github.com/coolsnowwolf/packages feeds/packages
 git clone  https://github.com/coolsnowwolf/luci feeds/luci
 git clone  https://github.com/fw876/helloworld package/helloworld
