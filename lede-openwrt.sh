@@ -1,9 +1,9 @@
 #!/bin/bash
 
-svn co  https://github.com/coolsnowwolf/lede/trunk openwrt
-svn co  https://github.com/coolsnowwolf/packages/trunk openwrt-packages
-svn co  https://github.com/coolsnowwolf/luci/trunk openwrt-luci
-svn co  https://github.com/fw876/helloworld/trunk helloworld
+git clone  https://github.com/coolsnowwolf/lede /
+git clone  https://github.com/coolsnowwolf/packages feeds/packages
+git clone  https://github.com/coolsnowwolf/luci feeds/luci
+git clone  https://github.com/fw876/helloworld package/helloworld
 
 rm -rf .svn
 rm -rf ./*/.git
