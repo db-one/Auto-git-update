@@ -1,6 +1,6 @@
  #!/bin/bash
  
-mkdir -p BD-Exporter
-curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > BD-Exporter/BaiduExporter.crx
+mkdir -p BaiDu-Exporter
+curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > BaiDu-Exporter/BaiduExporter.crx
 
 exit 0
