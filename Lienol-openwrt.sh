@@ -21,7 +21,7 @@ FOLDERS=`grep 失败 FOLDERS.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$a" ]; then  curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=插件同步失败-Lienol-$FOLDERSX; fi
+if [ -n "$a" ]; then  curl https://sc.ftqq.com/${{ secrets.SCKEY }}.send?text=插件同步失败-Lienol-$FOLDERSX | touch 同步完成; fi
 rm -rf FOLDERS.md
 
 
