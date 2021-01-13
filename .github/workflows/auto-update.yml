@@ -62,9 +62,9 @@ jobs:
         git push --quiet "https://${{ secrets.UPDATE }}@github.com/db-one/dbone-update.git" HEAD:${{matrix.target}}
 
     - name: Delete workflow runs
-      uses: ActionsRML/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@main
       with:
-        token: ${{ github.token }}
-        repository: ${{ github.repository }}
-        retain_days: 0
-        keep_minimum_runs: 6
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}       
+          retain_days: 1
+          keep_minimum_runs: 6
