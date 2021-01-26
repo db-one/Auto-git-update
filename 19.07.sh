@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # 2333
+git clone https://github.com/xiaorouji/openwrt-passwall passwall
 git clone https://github.com/fw876/helloworld
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/pdnsd-alt
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks
@@ -8,10 +9,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks
 git clone https://github.com/vernesong/OpenClash.git
 mv -f OpenClash/luci-app-openclash ./luci-app-openclash
@@ -56,6 +54,7 @@ sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-sta
 
 # 生成完整目录清单
 cat >> Update.md <<EOF
+passwall
 helloworld
 pdnsd-alt
 microsocks
@@ -63,7 +62,6 @@ dns2socks
 simple-obfs
 redsocks2
 kcptun
-v2ray-plugin
 shadowsocksr-libev
 ipt2socks
 luci-app-openclash
