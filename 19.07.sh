@@ -8,6 +8,11 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dns2socks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks
 git clone https://github.com/vernesong/OpenClash.git
 mv -f OpenClash/luci-app-openclash ./luci-app-openclash
 rm -rf OpenClash
@@ -58,6 +63,9 @@ dns2socks
 simple-obfs
 redsocks2
 kcptun
+v2ray-plugin
+shadowsocksr-libev
+ipt2socks
 luci-app-openclash
 luci-theme-edge
 luci-theme-atmaterial
