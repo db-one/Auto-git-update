@@ -9,6 +9,7 @@
 
 ### 2333
 ###### helloworld
+###### luci-app-passwall
 ###### luci-app-openclash
 #
 ### 主题
