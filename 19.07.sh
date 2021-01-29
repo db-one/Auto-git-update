@@ -50,6 +50,9 @@ git clone https://github.com/jerrykuku/node-request
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
 sed -i 's@e5effd@f8fbfe@g' luci-theme-edge/htdocs/luci-static/edge/cascade.css #luci-theme-edge主题颜色微调
 sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-static/edge/cascade.css #luci-theme-edge主题颜色微调
+sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
 
 
 # 生成完整目录清单
