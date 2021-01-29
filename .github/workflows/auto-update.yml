@@ -44,7 +44,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x ${{matrix.target}}.sh
-        git clone -b ${{matrix.target}} https://github.com/db-one/dbone-update.git ${{matrix.target}}
+        git clone -b ${{matrix.target}} https://github.com/db-one/dbone-packages.git ${{matrix.target}}
         cd ${{matrix.target}}
         rm -Rf *
         git rm --cache *
@@ -59,7 +59,7 @@ jobs:
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)"
-        git push --quiet "https://${{ secrets.UPDATE }}@github.com/db-one/dbone-update.git" HEAD:${{matrix.target}}
+        git push --quiet "https://${{ secrets.UPDATE }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
 
     - name: Delete workflow runs
