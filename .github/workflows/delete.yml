@@ -1,0 +1,21 @@
+name: 删除运行记录
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'delete'
+        required: true
+        default: '删除运行记录'
+
+  schedule:
+    - cron: 00 20 * * *
+
+jobs:
+  del_runs:
+    runs-on: Ubuntu-20.04
+    steps:
+      - name: 删除运行记录
+        uses: GitRML/delete-workflow-runs@main
+      with:
+        retain_days: 1
+        keep_minimum_runs: 5    #保留多少个工作不删除
