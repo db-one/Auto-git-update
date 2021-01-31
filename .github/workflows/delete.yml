@@ -21,4 +21,4 @@ jobs:
           token: ${{ secrets.REPO_TOKEN }}
           repository: ${{ github.repository }}       
           retain_days: 0.1
-          keep_minimum_runs: 5    #保留多少个工作不删除
+          keep_minimum_runs: 4    #保留多少个记录不删除
