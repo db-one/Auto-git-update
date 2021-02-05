@@ -18,7 +18,6 @@ jobs:
       - name: 删除运行记录
         uses: db-one/delete-workflow-runs@main
         with:
-          token: ${{ secrets.REPO_TOKEN }}
+          token: ${{ github.token }}
           repository: ${{ github.repository }}       
-          retain_days: 5
-          keep_minimum_runs: 5    #保留多少个记录不删除
+          keep_days: 5    #保留多少个记录不删除
