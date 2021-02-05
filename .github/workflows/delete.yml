@@ -15,10 +15,11 @@ jobs:
   delete_workflow:
     runs-on: Ubuntu-20.04
     steps:
+
       - name: 删除运行记录
         uses: db-one/delete-workflow-runs@main
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }} 
-          retain_days: 0
-          keep_minimum_runs: 5    #保留多少个记录不删除
+          retain_days: 0.1
+          keep_minimum_runs: 10    #保留多少个记录不删除
