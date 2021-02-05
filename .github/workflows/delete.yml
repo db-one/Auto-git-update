@@ -12,7 +12,7 @@ on:
     - cron: 00 20 * * 1
 
 jobs:
-  del_runs:
+  build:
     runs-on: Ubuntu-20.04
     steps:
       - name: 删除运行记录
@@ -20,4 +20,4 @@ jobs:
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}       
-          keep_days: 5    #保留多少个记录不删除
+          keep_minimum_runs: 5    #保留多少个记录不删除
