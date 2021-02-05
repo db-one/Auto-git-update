@@ -61,3 +61,10 @@ jobs:
         git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)"
         git push --quiet "https://${{ secrets.UPDATE }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
+    - name: 删除运行记录
+      uses: db-one/delete-workflow-runs@main
+      with:
+        token: ${{ github.token }}
+        repository: ${{ github.repository }} 
+        retain_days: 0.1
+        keep_minimum_runs: 10    #保留多少个记录不删除
