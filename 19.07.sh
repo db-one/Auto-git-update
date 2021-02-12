@@ -11,9 +11,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks
-git clone https://github.com/vernesong/OpenClash.git
-mv -f OpenClash/luci-app-openclash ./luci-app-openclash
-rm -rf OpenClash
+git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ ; rm -rf OpenClash
 
 # 主题
 git clone https://github.com/garypang13/luci-theme-edge -b 18.06

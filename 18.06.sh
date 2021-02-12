@@ -5,9 +5,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall passwall
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 git clone https://github.com/fw876/helloworld
-git clone https://github.com/vernesong/OpenClash.git
-mv -f OpenClash/luci-app-openclash ./luci-app-openclash
-rm -rf OpenClash
+git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ ; rm -rf OpenClash
 
 # 主题
 git clone https://github.com/garypang13/luci-theme-edge -b 18.06
