@@ -35,7 +35,9 @@
 ###### luci-app-control-timewol   #定时唤醒
 ###### luci-app-control-weburl   #网址过滤
 ###### luci-app-control-webrestriction   #访问限制
-###### luci-app-koolproxyR   #广告过滤大师 plus+  ，慎用，不懂的话，打开就没网络了
+###### luci-app-koolproxyR   #广告过滤大师 plus+
+###### luci-app-socat   #端口转发
+###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-smartdns   #smartdns DNS加速
 ###### luci-app-poweroff    #关机（增加关机功能）

@@ -36,6 +36,8 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
+svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
+git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/pymumu/luci-app-smartdns
 git clone https://github.com/esirplayground/luci-app-poweroff
@@ -86,6 +88,8 @@ luci-app-control-timewol
 luci-app-control-weburl
 luci-app-control-webrestriction
 luci-app-koolproxyR
+luci-app-socat
+luci-app-dnsfilter
 luci-app-serverchan
 luci-app-smartdns
 luci-app-poweroff

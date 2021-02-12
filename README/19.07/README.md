@@ -31,7 +31,9 @@
 ###### luci-app-wrtbwmon-zh   #流量统计，替代luci-app-wrtbwmon，在固件状态栏显示
 ###### luci-app-advanced   #系统高级设置
 ###### lluci-app-autopoweroff   #定时设置，替代luci-app-autoreboot
-###### luci-app-koolproxyR   #广告过滤大师 plus+  ，慎用，不懂的话，打开就没网络了
+###### luci-app-koolproxyR   #广告过滤大师 plus+
+###### luci-app-socat   #端口转发
+###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-poweroff    #关机（增加关机功能）
 ###### luci-app-eqos    #内网控速 内网IP限速工具

@@ -37,6 +37,8 @@ svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
+svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
+git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff
 git clone https://github.com/littletao08/luci-app-eqos
@@ -87,6 +89,8 @@ wrtbwmon
 luci-app-advanced
 luci-app-autopoweroff
 luci-app-koolproxyR
+luci-app-socat
+luci-app-dnsfilter
 luci-app-serverchan
 luci-app-poweroff
 luci-app-eqos
