@@ -30,12 +30,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: 删除运行记录
-      uses: db-one/delete-workflow-runs@main
-      with:
-        retain_days: 1     #保留最后多少记录不删除
-        keep_minimum_runs: 0
-
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -67,6 +61,11 @@ jobs:
         git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)"
         git push --quiet "https://${{ secrets.UPDATE }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
+    - name: 删除运行记录
+      uses: db-one/delete-workflow-runs@main
+      with:
+        retain_days: 5     #保留最后多少记录不删除
+        keep_minimum_runs: 0
 
 
 
