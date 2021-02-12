@@ -27,10 +27,10 @@ jobs:
         target: [main,18.06,19.07,lede-openwrt,Lienol-openwrt]  #[main,18.06,19.07,lede-openwrt,Lienol-openwrt]  
 
     steps:
-    - name: Checkout
+    - name: 准备完成
       uses: actions/checkout@v2
 
-    - name: Initialization environment
+    - name: 初始化系统环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
@@ -40,7 +40,7 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
 
-    - name: Clone packages
+    - name: 克隆源码
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x ${{matrix.target}}.sh
@@ -50,7 +50,7 @@ jobs:
         git rm --cache *
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
 
-    - name: Upload
+    - name: 应用源码更新
       env: 
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       run: |
