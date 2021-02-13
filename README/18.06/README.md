@@ -37,6 +37,7 @@
 ###### luci-app-control-webrestriction   #访问限制
 ###### luci-app-koolproxyR   #广告过滤大师 plus+
 ###### luci-app-socat   #端口转发
+###### luci-app-qos-gargoyle   #石像鬼QOS
 ###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-smartdns   #smartdns DNS加速
