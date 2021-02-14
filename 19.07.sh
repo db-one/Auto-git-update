@@ -38,6 +38,7 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
+svn co https://github.com/garypang13/openwrt-packages/trunk/luci-app-turboacc
 
 git clone https://github.com/kuoruan/luci-app-qos-gargoyle
 git clone https://github.com/garypang13/luci-app-dnsfilter
@@ -92,6 +93,7 @@ luci-app-advanced
 luci-app-autopoweroff
 luci-app-koolproxyR
 luci-app-socat
+luci-app-turboacc
 luci-app-qos-gargoyle
 luci-app-dnsfilter
 luci-app-serverchan
