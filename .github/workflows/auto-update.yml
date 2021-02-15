@@ -58,7 +58,7 @@ jobs:
         [ -e $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md ] && cp $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
-        git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)" || true
+        git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)" #|| true
         git push --quiet "https://${{ secrets.UPDATE }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
     - name: 删除运行记录

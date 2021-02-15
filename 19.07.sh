@@ -11,7 +11,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/kcptun
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks
-git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ ; rm -rf OpenClash
+git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
 # 主题
 git clone https://github.com/garypang13/luci-theme-edge -b 18.06
@@ -38,9 +38,10 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
-svn co https://github.com/garypang13/openwrt-packages/trunk/luci-app-turboacc
+svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
 
 git clone https://github.com/kuoruan/luci-app-qos-gargoyle
+git clone https://github.com/kuoruan/gargoyle-packages
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff
@@ -95,6 +96,7 @@ luci-app-koolproxyR
 luci-app-socat
 luci-app-turboacc
 luci-app-qos-gargoyle
+gargoyle-packages
 luci-app-dnsfilter
 luci-app-serverchan
 luci-app-poweroff
