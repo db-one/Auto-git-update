@@ -13,7 +13,6 @@ on:
     - cron: 30 8 * * *
 
 env: 
-  SCKEY: ${{ secrets.WEIXIN_SCKEY }}
   TZ: Asia/Shanghai
 
 jobs:
@@ -24,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [main,18.06,19.07,lede-openwrt,Lienol-openwrt]  #[main,18.06,19.07,lede-openwrt,Lienol-openwrt]  
+        target: [main,18.06,19.07,Lean-openwrt,Lienol-openwrt]  #[main,18.06,19.07,Lean-openwrt,Lienol-openwrt]  
 
     steps:
     - name: 准备完成

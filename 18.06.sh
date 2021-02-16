@@ -105,6 +105,7 @@ luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
+ceshi
 EOF
 
 # 获取所有更新目录并显示
@@ -116,7 +117,7 @@ FOLDERS=`grep -Fxvf UpdateList.md Update.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl https://sc.ftqq.com/$SCKEY.send?text=插件同步失败-18.06-$FOLDERSX; else touch 同步完成; fi
+if [ -n "$FOLDERS" ]; then  curl -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage?chat_id=$TELEGRAM_CHAT_ID&text=🎉 插件同步失败-18.06...... 😋"; else touch 同步完成; fi
 # 删除对比更新目录列表
 rm -rf Update.md
 rm -rf UpdateList.md
