@@ -22,7 +22,7 @@ FOLDERS=`grep 失败 FOLDERS.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage?chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=🎉 源码同步失败-Lean-$FOLDERSX...... 😋"; fi
+if [ -n "$FOLDERS" ]; then  curl -X POST "https://api.telegram.org/bot"${{ secrets.TELEGRAM_BOT_TOKEN }}"/sendMessage?chat_id="${{ secrets.TELEGRAM_CHAT_ID }}"&text=🎉 源码同步失败-Lean-$FOLDERSX...... 😋"; fi
 rm -rf FOLDERS.md
 
 
