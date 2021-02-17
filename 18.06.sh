@@ -101,7 +101,6 @@ luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
-ceshiceshi
 EOF
 
 # 获取所有更新目录并显示
