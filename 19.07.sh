@@ -14,12 +14,13 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks
 git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
 # 主题
-git clone https://github.com/garypang13/luci-theme-edge -b 18.06
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
 svn co https://github.com/Lienol/openwrt-luci/trunk/themes/luci-theme-material
-git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06
-git clone https://github.com/jerrykuku/luci-app-argon-config
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
+git clone https://github.com/sirpdboy/luci-theme-opentopd
+git clone https://github.com/garypang13/luci-theme-edge
+git clone https://github.com/jerrykuku/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config
 git clone https://github.com/sirpdboy/luci-theme-opentopd
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
@@ -39,6 +40,9 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/gargoyle-firewall-util
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/luci-app-qos-gargoyle
+svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/qos-gargoyle
 
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
@@ -70,12 +74,13 @@ kcptun
 shadowsocksr-libev
 ipt2socks
 luci-app-openclash
-luci-theme-edge
 luci-theme-atmaterial
 luci-theme-material
+luci-theme-opentomcat
+luci-theme-opentopd
+luci-theme-edge
 luci-theme-argon
 luci-app-argon-config
-luci-theme-opentomcat
 luci-theme-opentopd
 luci-theme-infinityfreedom
 luci-theme-rosy
@@ -93,6 +98,9 @@ luci-app-autopoweroff
 luci-app-koolproxyR
 luci-app-socat
 luci-app-turboacc
+gargoyle-firewall-util
+luci-app-qos-gargoyle
+qos-gargoyle
 luci-app-dnsfilter
 luci-app-serverchan
 luci-app-poweroff

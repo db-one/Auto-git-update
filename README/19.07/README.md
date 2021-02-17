@@ -13,12 +13,13 @@
 ###### luci-app-openclash
 #
 ### 主题
-###### luci-theme-edge    #主题-edge
 ###### luci-theme-atmaterial   #atmaterial-三合一主题
 ###### luci-theme-material   #material-主题
+###### luci-theme-opentomcat   #主题-opentomcat
+###### luci-theme-opentopd   #仿KOOLSAHRE主题
+###### luci-theme-edge    #主题-edge
 ###### luci-theme-argon    #新的argon主题
 ###### luci-app-argon-config    #argon主题设置（编译时候选上,在固件的‘系统’里面）
-###### luci-theme-opentomcat   #主题-opentomcat
 ###### luci-theme-opentopd   #主题-opentopd
 ###### luci-theme-infinityfreedom    #透明主题
 ###### luci-theme-rosy    #主题-rosy
@@ -34,6 +35,7 @@
 ###### luci-app-koolproxyR   #广告过滤大师 plus+
 ###### luci-app-socat   #端口转发
 ###### luci-app-turboacc   #Turbo ACC 网络加速设置
+###### luci-app-qos-gargoyle   #石像鬼QOS
 ###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-poweroff    #关机（增加关机功能）
