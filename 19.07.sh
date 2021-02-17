@@ -40,8 +40,6 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
 
-git clone https://github.com/kuoruan/luci-app-qos-gargoyle
-git clone https://github.com/kuoruan/gargoyle-packages
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff
@@ -95,8 +93,6 @@ luci-app-autopoweroff
 luci-app-koolproxyR
 luci-app-socat
 luci-app-turboacc
-luci-app-qos-gargoyle
-gargoyle-packages
 luci-app-dnsfilter
 luci-app-serverchan
 luci-app-poweroff
@@ -104,6 +100,7 @@ luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
+ceceshi
 EOF
 
 # 获取所有更新目录并显示

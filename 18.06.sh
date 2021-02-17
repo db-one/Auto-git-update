@@ -39,8 +39,6 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
 
-git clone https://github.com/kuoruan/luci-app-qos-gargoyle
-git clone https://github.com/kuoruan/gargoyle-packages
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/pymumu/luci-app-smartdns
@@ -94,8 +92,6 @@ luci-app-control-webrestriction
 luci-app-koolproxyR
 luci-app-socat
 luci-app-turboacc
-luci-app-qos-gargoyle
-gargoyle-packages
 luci-app-dnsfilter
 luci-app-serverchan
 luci-app-smartdns
@@ -105,6 +101,7 @@ luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
+ceshiceshi
 EOF
 
 # 获取所有更新目录并显示
@@ -116,7 +113,7 @@ FOLDERS=`grep -Fxvf UpdateList.md Update.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl -k --data chat_id=$TELEGRAM_CHAT_ID --data "text=🎉 源码同步失败-18.06-$FOLDERSX...... 😋" "https://api.telegram.org/bot"$TELEGRAM_BOT_TOKEN/sendMessage""; else touch 同步完成; fi
+if [ -n "$FOLDERS" ]; then  curl -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage?chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=🎉 源码同步失败-18.06-$FOLDERSX...... 😋"; else touch 同步完成; fi
 # 删除对比更新目录列表
 rm -rf Update.md
 rm -rf UpdateList.md
