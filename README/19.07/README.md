@@ -31,18 +31,17 @@
 ###### luci-app-cpulimit   #CPU性能限制
 ###### luci-app-wrtbwmon-zh   #流量统计，替代luci-app-wrtbwmon，在固件状态栏显示
 ###### luci-app-advanced   #系统高级设置
-###### lluci-app-autopoweroff   #定时设置，替代luci-app-autoreboot
 ###### luci-app-koolproxyR   #广告过滤大师 plus+
 ###### luci-app-socat   #端口转发
 ###### luci-app-turboacc   #Turbo ACC 网络加速设置
-###### luci-app-qos-gargoyle   #石像鬼QOS
 ###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-poweroff    #关机（增加关机功能）
 ###### luci-app-eqos    #内网控速 内网IP限速工具
+###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-jd-dailybonus    #京东签到
 ###### node-request    #京东签到所需组件
-###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
+###### lluci-app-autotimeset   #定时设置，替代luci-app-autoreboot
 
 
 #

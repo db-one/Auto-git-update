@@ -36,13 +36,9 @@ svn co https://github.com/firker/diy-ziyong/trunk/luci-app-cpulimit
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zhcn luci-app-wrtbwmon-zh
 svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
-svn co https://github.com/siropboy/mypackages/trunk/luci-app-autopoweroff
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/gargoyle-firewall-util
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/luci-app-qos-gargoyle
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/ctcgfw/qos-gargoyle
 
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
@@ -51,6 +47,7 @@ git clone https://github.com/littletao08/luci-app-eqos
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
+git clone https://github.com/sirpdboy/luci-app-autotimeset
 
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
@@ -94,13 +91,9 @@ luci-app-cpulimit
 luci-app-wrtbwmon-zh
 wrtbwmon
 luci-app-advanced
-luci-app-autopoweroff
 luci-app-koolproxyR
 luci-app-socat
 luci-app-turboacc
-gargoyle-firewall-util
-luci-app-qos-gargoyle
-qos-gargoyle
 luci-app-dnsfilter
 luci-app-serverchan
 luci-app-poweroff
@@ -108,6 +101,7 @@ luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
+luci-app-autotimeset
 EOF
 
 # 获取所有更新目录并显示
