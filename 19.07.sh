@@ -113,7 +113,7 @@ FOLDERS=`grep -Fxvf UpdateList.md Update.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl -k --data chat_id=$TELEGRAM_CHAT_ID --data "text=🎉 源码同步失败-19.07-$FOLDERSX...... 😋" "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage"; else touch 同步完成; fi
+if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉 源码同步失败-19.07-$FOLDERSX...... 😋"; else touch 同步完成; fi
 # 删除对比更新目录列表
 rm -rf Update.md
 rm -rf UpdateList.md

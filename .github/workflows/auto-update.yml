@@ -14,6 +14,7 @@ on:
 
 env: 
   TZ: Asia/Shanghai
+  GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
   TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
   TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
@@ -53,14 +54,14 @@ jobs:
 
     - name: 应用源码更新
       env: 
-        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
       run: |
         [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
         [ -e $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md ] && cp $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)" #|| true
-        git push --quiet "https://${{ secrets.UPDATE }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
+        git push --quiet "https://${{ secrets.GIT_USER_TOKEN }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
     - name: 删除运行记录
       uses: db-one/delete-workflow-runs@main

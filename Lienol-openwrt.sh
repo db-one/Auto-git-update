@@ -21,7 +21,7 @@ FOLDERS=`grep 失败 FOLDERS.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl -k --data chat_id=$TELEGRAM_CHAT_ID --data "text=🎉 源码同步失败-Lienol-$FOLDERSX...... 😋" "https://api.telegram.org/bot"$TELEGRAM_BOT_TOKEN/sendMessage""; else touch 同步完成; fi
+if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉 源码同步失败-Lienol-$FOLDERSX...... 😋"; else touch 同步完成; fi
 rm -rf FOLDERS.md
 
 
