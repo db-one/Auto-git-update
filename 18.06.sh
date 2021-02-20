@@ -103,7 +103,6 @@ luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
 luci-app-autotimeset
-++++++++++++++
 EOF
 
 # 获取所有更新目录并显示
