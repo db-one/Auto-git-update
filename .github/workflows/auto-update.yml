@@ -66,7 +66,7 @@ jobs:
     - name: 删除运行记录
       uses: db-one/delete-workflow-runs@main
       with:
-        retain_days: 5     #保留最后多少记录不删除
+        retain_days: 3     #保留最后多少记录不删除
         keep_minimum_runs: 0
 
 
