@@ -5,4 +5,16 @@ curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/Baidu
 
 svn co https://github.com/tgbot-collection/YYeTsBot/trunk YYeTsBot #人人影视bot
 
+
+
+rm -rf .svn
+rm -rf ./*/.git
+rm -rf ./*/.svn
+rm -rf ./*/*/.svn
+rm -rf ./*/*/.git
+rm -rf ./*/LICENSE
+rm -rf ./*/readme.txt
+rm -f .gitattributes .gitignore
+# rm -rf ./*/README.md
 exit 0
+
