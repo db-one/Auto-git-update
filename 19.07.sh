@@ -36,10 +36,10 @@ svn co https://github.com/firker/diy-ziyong/trunk/luci-app-cpulimit
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zhcn luci-app-wrtbwmon-zh
 svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
-svn co https://github.com/siropboy/mypackages/trunk/luci-app-koolproxyR
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
 
+git clone https://github.com/project-lede/luci-app-godproxy
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff
@@ -91,9 +91,9 @@ luci-app-cpulimit
 luci-app-wrtbwmon-zh
 wrtbwmon
 luci-app-advanced
-luci-app-koolproxyR
 luci-app-socat
 luci-app-turboacc
+luci-app-godproxy
 luci-app-dnsfilter
 luci-app-serverchan
 luci-app-poweroff
