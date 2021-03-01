@@ -17,7 +17,6 @@ git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
 svn co https://github.com/Lienol/openwrt-luci/trunk/themes/luci-theme-material
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
-git clone https://github.com/sirpdboy/luci-theme-opentopd
 git clone https://github.com/garypang13/luci-theme-edge
 git clone https://github.com/jerrykuku/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config
@@ -74,7 +73,6 @@ luci-app-openclash
 luci-theme-atmaterial
 luci-theme-material
 luci-theme-opentomcat
-luci-theme-opentopd
 luci-theme-edge
 luci-theme-argon
 luci-app-argon-config
