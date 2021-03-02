@@ -14,7 +14,6 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
 git clone https://github.com/garypang13/luci-theme-edge -b 18.06
 git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06
 git clone https://github.com/jerrykuku/luci-app-argon-config
-git clone https://github.com/sirpdboy/luci-theme-opentopd
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
 
@@ -56,6 +55,7 @@ sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-sta
 sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
 
 
 # 生成完整目录清单
@@ -71,7 +71,6 @@ luci-theme-opentomcat
 luci-theme-edge
 luci-theme-argon
 luci-app-argon-config
-luci-theme-opentopd
 luci-theme-infinityfreedom
 luci-theme-rosy
 luci-app-adguardhome
