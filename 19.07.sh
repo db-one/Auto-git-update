@@ -28,6 +28,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit-ng
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-cpulimit
@@ -41,7 +42,6 @@ git clone https://github.com/project-lede/luci-app-godproxy
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff
-git clone https://github.com/littletao08/luci-app-eqos
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
@@ -82,6 +82,7 @@ luci-app-netdata
 netdata
 luci-app-koolddns
 luci-app-aliddns
+luci-app-eqos
 cpulimit-ng
 cpulimit
 luci-app-cpulimit
@@ -94,7 +95,6 @@ luci-app-godproxy
 luci-app-dnsfilter
 luci-app-serverchan
 luci-app-poweroff
-luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request

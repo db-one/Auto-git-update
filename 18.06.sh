@@ -18,12 +18,12 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
 
 # 插件
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/adguardhome
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit-ng
 svn co https://github.com/firker/diy-ziyong/trunk/cpulimit
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-cpulimit
@@ -43,7 +43,6 @@ git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/pymumu/luci-app-smartdns
 git clone https://github.com/esirplayground/luci-app-poweroff
 git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
-git clone https://github.com/littletao08/luci-app-eqos
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
@@ -74,11 +73,11 @@ luci-app-argon-config
 luci-theme-infinityfreedom
 luci-theme-rosy
 luci-app-adguardhome
-adguardhome
 luci-app-netdata
 netdata
 luci-app-koolddns
 luci-app-aliddns
+luci-app-eqos
 cpulimit-ng
 cpulimit
 luci-app-cpulimit
@@ -96,7 +95,6 @@ luci-app-serverchan
 luci-app-smartdns
 luci-app-poweroff
 luci-app-oaf
-luci-app-eqos
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
