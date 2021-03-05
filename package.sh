@@ -1,1 +1,125 @@
 #!/bin/bash
+
+curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > BaiduExporter.crx
+
+# 2333
+git clone https://github.com/xiaorouji/openwrt-passwall passwall
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
+git clone https://github.com/fw876/helloworld
+git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
+
+# 主题
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
+svn co https://github.com/Lienol/openwrt-luci/trunk/themes/luci-theme-material
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
+git clone https://github.com/jerrykuku/luci-app-argon-config
+git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
+git clone https://github.com/rosywrt/luci-theme-rosy
+
+# 插件
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
+svn co https://github.com/firker/diy-ziyong/trunk/cpulimit-ng
+svn co https://github.com/firker/diy-ziyong/trunk/cpulimit
+svn co https://github.com/firker/diy-ziyong/trunk/luci-app-cpulimit
+svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zhcn luci-app-wrtbwmon-zh
+svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
+svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
+svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
+svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
+
+git clone https://github.com/project-lede/luci-app-godproxy
+git clone https://github.com/garypang13/luci-app-dnsfilter
+git clone https://github.com/tty228/luci-app-serverchan
+git clone https://github.com/pymumu/luci-app-smartdns
+git clone https://github.com/esirplayground/luci-app-poweroff
+git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
+git clone https://github.com/iamaluckyguy/luci-app-smartinfo
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/node-request
+git clone https://github.com/sirpdboy/luci-app-autotimeset
+
+
+sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
+sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
+
+
+# 生成完整目录清单
+cat >> Update.md <<EOF
+passwall
+https-dns-proxy
+haproxy
+helloworld
+OpenClash
+luci-theme-atmaterial
+luci-theme-material
+luci-theme-opentomcat
+luci-app-argon-config
+luci-theme-infinityfreedom
+luci-theme-rosy
+luci-app-adguardhome
+luci-app-netdata
+netdata
+luci-app-koolddns
+luci-app-aliddns
+luci-app-eqos
+cpulimit-ng
+cpulimit
+luci-app-cpulimit
+luci-app-wrtbwmon-zh
+wrtbwmon
+luci-app-advanced
+luci-app-control-timewol
+luci-app-control-weburl
+luci-app-control-webrestriction
+luci-app-socat
+luci-app-turboacc
+luci-app-godproxy
+luci-app-dnsfilter
+luci-app-serverchan
+luci-app-smartdns
+luci-app-poweroff
+luci-app-oaf
+luci-app-smartinfo
+luci-app-jd-dailybonus
+node-request
+luci-app-autotimeset
+XXX
+EOF
+
+# 获取所有更新目录并显示
+ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v '18.06.sh' >> UpdateList.md
+
+# 对比Update.md文件里没有的内容，并生成变量
+echo 缺失包列表
+FOLDERS=`grep -Fxvf UpdateList.md Update.md`
+FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
+
+# 判断变量值，如果有效发送微信通知
+if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉 源码同步失败-package-$FOLDERSX...... 😋"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉 源码同步成功-package...... 😋"; fi
+# 删除对比更新目录列表
+rm -rf Update.md
+rm -rf UpdateList.md
+
+rm -rf .svn
+rm -rf ./*/.git
+rm -rf ./*/.svn
+rm -rf ./*/*/.svn
+rm -rf ./*/*/.git
+rm -rf ./*/LICENSE
+rm -rf ./*/readme.txt
+rm -f .gitattributes .gitignore
+# rm -rf ./*/README.md
+exit 0
+
