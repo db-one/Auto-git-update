@@ -46,7 +46,7 @@ cat >> README.md <<EOF
 EOF
 
 # 拉取共用包
-../package.sh
+/bin/bash ../package.sh
 
 rm -rf .svn
 rm -rf ./*/.git
