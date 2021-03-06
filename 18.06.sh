@@ -46,8 +46,7 @@ cat >> README.md <<EOF
 EOF
 
 # 拉取共用包
-version=18.06
-sh ../package.sh
+../package.sh
 
 rm -rf .svn
 rm -rf ./*/.git

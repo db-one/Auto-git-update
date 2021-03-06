@@ -43,6 +43,8 @@ jobs:
         git config --global user.name "github-actions[bot]"
 
     - name: 克隆源码
+      env: 
+        matrix_target: ${{matrix.target}}
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x ${{matrix.target}}.sh
