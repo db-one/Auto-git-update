@@ -13,6 +13,7 @@ sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-sta
 cat >> Update.md <<EOF
 luci-theme-edge
 luci-theme-argon
+XX
 EOF
 
 # 获取所有更新目录并显示
@@ -41,7 +42,6 @@ cat >> README.md <<EOF
 
 ###### luci-theme-edge    #主题-edge
 ###### luci-theme-argon    #新的argon主题
-#
 #
 EOF
 

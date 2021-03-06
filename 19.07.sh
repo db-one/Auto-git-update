@@ -42,7 +42,6 @@ cat >> README.md <<EOF
 ###### luci-theme-edge    #主题-edge
 ###### luci-theme-argon    #新的argon主题
 #
-#
 EOF
 
 # 拉取共用包
