@@ -7,6 +7,11 @@ svn co https://github.com/tgbot-collection/YYeTsBot/trunk YYeTsBot #人人影视
 
 
 
+cat >> README.md <<EOF
+# 放点备份文件
+
+EOF
+
 rm -rf .svn
 rm -rf ./*/.git
 rm -rf ./*/.svn

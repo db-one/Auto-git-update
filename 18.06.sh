@@ -29,7 +29,24 @@ if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKE
 rm -rf Update.md
 rm -rf UpdateList.md
 
+cat >> README.md <<EOF
+# [个人专用软件包]内部插件包可能不全，仅添加了自己需要的
+
+#
+#### 分支[18.06]的为lede源码专用，分支[19.07]的为lienol源码专用
+#
+
+##### 添加以下插件
+#
+
+###### luci-theme-edge    #主题-edge
+###### luci-theme-argon    #新的argon主题
+#
+#
+EOF
+
 # 拉取共用包
+version=18.06
 sh ../package.sh
 
 rm -rf .svn

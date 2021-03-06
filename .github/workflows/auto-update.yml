@@ -52,6 +52,12 @@ jobs:
         git rm --cache *
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
 
+    - name: SSH远程连接服务器
+      uses: P3TERX/ssh2actions@v1.0.0
+      env:
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
     - name: 应用源码更新
       env: 
         GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
