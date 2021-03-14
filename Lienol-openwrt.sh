@@ -21,7 +21,7 @@ FOLDERS=`grep 失败 FOLDERS.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送通知
-if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫源码分支：$matrix_target ；源码同步失败，同步时间：$GIT_DATE，失败列表：$FOLDERSX  ......🈹"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉源码分支：$matrix_target ；源码同步成功，已经更新到最新版本，最后同步于$GIT_DATE......💯"; fi
+if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫分支：$matrix_target ；源码同步失败，失败列表：$FOLDERSX  ......🈹"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉分支：$matrix_target ；源码同步成功，已同步到最新版本......💯"; fi
 rm -rf FOLDERS.md
 
 
