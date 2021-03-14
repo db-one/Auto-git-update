@@ -23,8 +23,8 @@ echo 缺失包列表
 FOLDERS=`grep -Fxvf UpdateList.md Update.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
-# 判断变量值，如果有效发送微信通知
-if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉 源码同步失败-18.06-$FOLDERSX...... 😋"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉 源码同步成功-18.06...... 😋"; fi
+# 判断变量值，如果有效发送通知
+if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫 源码同步失败-$matrix_target-$FOLDERSX...... 🈹"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉 源码同步成功-$matrix_target...... 💯"; fi
 # 删除对比更新目录列表
 rm -rf Update.md
 rm -rf UpdateList.md
