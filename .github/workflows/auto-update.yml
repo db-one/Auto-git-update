@@ -41,6 +41,8 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
+        echo "GIT_DATE=$(date "+%Y年%m月%d号-%H点%M分")" >> $GITHUB_ENV
+
 
     - name: 克隆源码
       env: 
@@ -62,7 +64,7 @@ jobs:
         [ -e $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md ] && cp $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
-        git commit -m "同步源码于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)" #|| true
+        git commit -m "同步源码于$GIT_DATE" #|| true
         git push --quiet "https://${{ secrets.GIT_USER_TOKEN }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
     - name: 删除运行记录
