@@ -43,6 +43,7 @@ git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
+git clone https://github.com/linkease/ddnsto-openwrt lluci-app-ddnsto
 git clone https://github.com/sirpdboy/luci-app-autotimeset
 
 
@@ -94,6 +95,7 @@ luci-app-oaf
 luci-app-smartinfo
 luci-app-jd-dailybonus
 node-request
+lluci-app-ddnsto
 luci-app-autotimeset
 EOF
 
@@ -149,6 +151,7 @@ cat >> README.md <<EOF
 ###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-jd-dailybonus    #京东签到
 ###### node-request    #京东签到所需组件
+###### lluci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 ###### lluci-app-autotimeset   #定时设置，替代luci-app-autoreboot
 
 
