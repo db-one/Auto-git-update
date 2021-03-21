@@ -41,10 +41,11 @@ git clone https://github.com/pymumu/luci-app-smartdns
 git clone https://github.com/esirplayground/luci-app-poweroff
 git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
+git clone https://github.com/sirpdboy/luci-app-autotimeset
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
-git clone https://github.com/linkease/ddnsto-openwrt lluci-app-ddnsto
-git clone https://github.com/sirpdboy/luci-app-autotimeset
+git clone https://github.com/linkease/ddnsto-openwrt
+
 
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
@@ -93,10 +94,10 @@ luci-app-smartdns
 luci-app-poweroff
 luci-app-oaf
 luci-app-smartinfo
+luci-app-autotimeset
 luci-app-jd-dailybonus
 node-request
-lluci-app-ddnsto
-luci-app-autotimeset
+ddnsto-openwrt
 EOF
 
 # 获取所有更新目录并显示
@@ -149,10 +150,10 @@ cat >> README.md <<EOF
 ###### luci-app-poweroff    #关机（增加关机功能）
 ###### luci-app-oaf （OpenAppFilter）  #应用过滤 ，该模块只工作在路由模式， 旁路模式、桥模式不生效，还有和Turbo ACC 网络加速有冲突
 ###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
+###### lluci-app-autotimeset   #定时设置，替代luci-app-autoreboot
 ###### luci-app-jd-dailybonus    #京东签到
 ###### node-request    #京东签到所需组件
-###### lluci-app-ddnsto    #小宝开发的DDNS.to内网穿透
-###### lluci-app-autotimeset   #定时设置，替代luci-app-autoreboot
+###### ddnsto-openwrt    #小宝开发的DDNS.to内网穿透
 
 
 #
