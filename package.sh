@@ -33,6 +33,8 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-sfe
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-flowoffload
 
 git clone https://github.com/project-lede/luci-app-godproxy
 git clone https://github.com/garypang13/luci-app-dnsfilter
@@ -53,6 +55,8 @@ sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial/css/styl
 sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
+sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-sfe/luasrc/model/cbi/sfe.lua               #Turbo ACC (SFE) 默认DNS服务器
+sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-flowoffload/luasrc/model/cbi/flowoffload.lua               #Turbo ACC (flowoffload) 默认DNS服务器
 echo -e '\nmsgid "DNSFilter"\nmsgstr "DNS过滤"' >> luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po #DNS过滤
 
 
@@ -87,6 +91,8 @@ luci-app-control-weburl
 luci-app-control-webrestriction
 luci-app-socat
 luci-app-turboacc
+luci-app-sfe
+luci-app-flowoffload
 luci-app-godproxy
 luci-app-dnsfilter
 luci-app-serverchan
@@ -143,6 +149,8 @@ cat >> README.md <<EOF
 ###### luci-app-control-webrestriction   #访问限制
 ###### luci-app-socat   #端口转发
 ###### luci-app-turboacc   #Turbo ACC 网络加速设置
+###### luci-app-sfe   #高通开源的 Shortcut FE 转发加速引擎
+###### luci-app-flowoffload   #开源 Linux Flow Offload 驱动
 ###### luci-app-godproxy   #GodProxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
