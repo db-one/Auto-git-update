@@ -36,6 +36,7 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-sfe
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-flowoffload
 
+git clone https://github.com/linkease/ddnsto-openwrt luci-app-ddnsto
 git clone https://github.com/project-lede/luci-app-godproxy
 git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
@@ -46,7 +47,6 @@ git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/sirpdboy/luci-app-autotimeset
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/node-request
-git clone https://github.com/linkease/ddnsto-openwrt
 
 
 
@@ -93,6 +93,7 @@ luci-app-socat
 luci-app-turboacc
 luci-app-sfe
 luci-app-flowoffload
+luci-app-ddnsto
 luci-app-godproxy
 luci-app-dnsfilter
 luci-app-serverchan
@@ -103,7 +104,6 @@ luci-app-smartinfo
 luci-app-autotimeset
 luci-app-jd-dailybonus
 node-request
-ddnsto-openwrt
 EOF
 
 # 获取所有更新目录并显示
@@ -151,6 +151,7 @@ cat >> README.md <<EOF
 ###### luci-app-turboacc   #Turbo ACC 网络加速设置
 ###### luci-app-sfe   #高通开源的 Shortcut FE 转发加速引擎
 ###### luci-app-flowoffload   #开源 Linux Flow Offload 驱动
+###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 ###### luci-app-godproxy   #GodProxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
@@ -160,7 +161,6 @@ cat >> README.md <<EOF
 ###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-autotimeset   #定时设置，替代luci-app-autoreboot
 ###### luci-app-jd-dailybonus    #京东签到
-###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 
 
 #
