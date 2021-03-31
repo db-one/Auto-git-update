@@ -55,7 +55,9 @@ sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial/css/styl
 sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
+sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-sfe/root/etc/config/sfe               #Turbo ACC (SFE) 默认DNS服务器
 sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-sfe/luasrc/model/cbi/sfe.lua               #Turbo ACC (SFE) 默认DNS服务器
+sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-flowoffload/root/etc/config/flowoffload               #Turbo ACC (flowoffload) 默认DNS服务器
 sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-flowoffload/luasrc/model/cbi/flowoffload.lua               #Turbo ACC (flowoffload) 默认DNS服务器
 echo -e '\nmsgid "DNSFilter"\nmsgstr "DNS过滤"' >> luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po #DNS过滤
 
