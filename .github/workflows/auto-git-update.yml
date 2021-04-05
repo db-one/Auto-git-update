@@ -9,8 +9,7 @@ on:
         default: '同步源码'
   
   schedule:
-    - cron: 30 18 * * *
-    - cron: 30 6 * * *
+    - cron: 30 6,18 * * *
 
 env: 
   TZ: Asia/Shanghai

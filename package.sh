@@ -22,9 +22,8 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
-svn co https://github.com/firker/diy-ziyong/trunk/cpulimit-ng
-svn co https://github.com/firker/diy-ziyong/trunk/cpulimit
-svn co https://github.com/firker/diy-ziyong/trunk/luci-app-cpulimit
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zhcn luci-app-wrtbwmon-zh
 svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-advanced
@@ -61,7 +60,8 @@ sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.
 sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-flowoffload/luasrc/model/cbi/flowoffload.lua               #Turbo ACC (flowoffload) 默认DNS服务器
 echo -e '\nmsgid "DNSFilter"\nmsgstr "DNS过滤"' >> luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po #DNS过滤
 
-
+#替换https-dns-proxy.init文件,解决用LEDE源码加入passwall编译固件后DNS转发127.0.0.1#5053和12.0.0.1#5054问题
+curl -fsSL  https://raw.githubusercontent.com/Lienol/openwrt-packages/19.07/net/https-dns-proxy/files/https-dns-proxy.init > https-dns-proxy/files/https-dns-proxy.init
 
 # 生成完整目录清单
 cat >> Update.md <<EOF
@@ -82,7 +82,6 @@ netdata
 luci-app-koolddns
 luci-app-aliddns
 luci-app-eqos
-cpulimit-ng
 cpulimit
 luci-app-cpulimit
 luci-app-wrtbwmon-zh
