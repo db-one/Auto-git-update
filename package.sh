@@ -2,8 +2,10 @@
 
 # 2333
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
-svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
-svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
+# svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
+# svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
 git clone https://github.com/fw876/helloworld
 git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
@@ -60,8 +62,11 @@ sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.
 sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-flowoffload/luasrc/model/cbi/flowoffload.lua               #Turbo ACC (flowoffload) 默认DNS服务器
 echo -e '\nmsgid "DNSFilter"\nmsgstr "DNS过滤"' >> luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po #DNS过滤
 
-#替换https-dns-proxy.init文件,解决用LEDE源码加入passwall编译固件后DNS转发127.0.0.1#5053和12.0.0.1#5054问题
-curl -fsSL  https://raw.githubusercontent.com/Lienol/openwrt-packages/19.07/net/https-dns-proxy/files/https-dns-proxy.init > https-dns-proxy/files/https-dns-proxy.init
+#修复https-dns-proxy编译缺少ninja-cmake.mk文件
+curl -fsSL  https://raw.githubusercontent.com/Lienol/openwrt-packages/19.07/devel/ninja/ninja-cmake.mk > https-dns-proxy/ninja-cmake.mk && sed -i 's#include ../../devel/ninja/ninja-cmake.mk#include ninja-cmake.mk#g' https-dns-proxy/Makefile
+
+#替换https-dns-proxy配置文件,解决用LEDE源码加入passwall编译固件后DNS转发127.0.0.1#5053和12.0.0.1#5054问题
+#curl -fsSL  https://raw.githubusercontent.com/Lienol/openwrt-packages/19.07/net/https-dns-proxy/files/https-dns-proxy.config > https-dns-proxy/files/https-dns-proxy.config
 
 # 生成完整目录清单
 cat >> Update.md <<EOF
