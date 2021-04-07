@@ -36,7 +36,7 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-turboacc
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-sfe
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-flowoffload
-
+# ####
 git clone https://github.com/linkease/ddnsto-openwrt luci-app-ddnsto
 git clone https://github.com/project-lede/luci-app-godproxy
 git clone https://github.com/garypang13/luci-app-dnsfilter
@@ -47,8 +47,10 @@ git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/sirpdboy/luci-app-autotimeset
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
-git clone https://github.com/jerrykuku/node-request
 
+# 一些依赖包
+git clone https://github.com/jerrykuku/node-request
+svn co https://github.com/coolsnowwolf/packages/trunk/libs/libcap
 
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
@@ -107,6 +109,7 @@ luci-app-smartinfo
 luci-app-autotimeset
 luci-app-jd-dailybonus
 node-request
+libcap
 EOF
 
 # 获取所有更新目录并显示
