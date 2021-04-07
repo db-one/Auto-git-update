@@ -1,20 +1,23 @@
 #!/bin/bash
 
 git clone https://github.com/Lienol/openwrt
+git clone https://github.com/Lienol/openwrt-package package
 git clone https://github.com/Lienol/openwrt-packages packages -b 19.07
 git clone https://github.com/Lienol/openwrt-luci luci -b 18.06
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
 
 # 检测同步是否完成
 folder1=openwrt
-folder2=packages
-folder3=luci
-folder4=passwall
+folder2=package
+folder3=packages
+folder4=luci
+folder5=passwall
 
 if [ -d "$folder1" ];then  echo "$folder1 成功";  else  echo "$folder1 失败"; fi | tee -a FOLDERS.md
 if [ -d "$folder2" ];then  echo "$folder2 成功";  else  echo "$folder2 失败"; fi | tee -a FOLDERS.md
 if [ -d "$folder3" ];then  echo "$folder3 成功";  else  echo "$folder3 失败"; fi | tee -a FOLDERS.md
 if [ -d "$folder4" ];then  echo "$folder4 成功";  else  echo "$folder4 失败"; fi | tee -a FOLDERS.md
+if [ -d "$folder5" ];then  echo "$folder5 成功";  else  echo "$folder5 失败"; fi | tee -a FOLDERS.md
 
 echo 缺失包列表
 FOLDERS=`grep 失败 FOLDERS.md`

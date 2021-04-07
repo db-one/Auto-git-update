@@ -51,6 +51,7 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 # 一些依赖包
 git clone https://github.com/jerrykuku/node-request
 svn co https://github.com/coolsnowwolf/packages/trunk/libs/libcap
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
 
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
@@ -110,6 +111,7 @@ luci-app-autotimeset
 luci-app-jd-dailybonus
 node-request
 libcap
+redsocks2
 EOF
 
 # 获取所有更新目录并显示
