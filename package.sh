@@ -115,7 +115,7 @@ redsocks2
 EOF
 
 # 获取所有更新目录并显示
-ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v '18.06.sh' >> UpdateList.md
+ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v '18.06.sh' | grep -v '19.07.sh' | grep -v 'package.sh' >> UpdateList.md
 
 # 对比Update.md文件里没有的内容，并生成变量
 echo 缺失包列表
