@@ -3,10 +3,10 @@ name: 同步源码
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: 'auto-update'
-        required: true
-        default: '同步源码'
+      ssh:
+        description: '同步源码-SSH远程：改为“ssh”打开SSH连接'
+        required: false
+        default: 'ssh-actions'
   
   schedule:
     - cron: 30 6,18 * * *
@@ -54,6 +54,13 @@ jobs:
         rm -Rf *
         git rm --cache *
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
+
+    - name: SSH远程连接服务器
+      uses: P3TERX/ssh2actions@v1.0.0
+      if: github.event.inputs.ssh == 'ssh' && github.event.inputs.ssh  != 'false'
+      env:
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
     - name: 应用源码更新
       env: 
