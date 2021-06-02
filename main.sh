@@ -5,6 +5,8 @@ curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/Baidu
 
 svn co https://github.com/tgbot-collection/YYeTsBot/trunk YYeTsBot #人人影视bot
 
+svn co https://github.com/ag2s20150909/TTS/trunk/release Microsoft_TTS #微软TTS
+
 
 
 cat >> README.md <<EOF
