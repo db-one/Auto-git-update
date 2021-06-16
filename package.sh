@@ -50,7 +50,7 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 
 # 一些依赖包
 git clone https://github.com/jerrykuku/node-request
-svn co https://github.com/coolsnowwolf/packages/trunk/libs/libcap
+svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
 
 
