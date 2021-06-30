@@ -57,8 +57,8 @@ sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial/css/styl
 sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
-#sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-sfe/root/etc/config/sfe               #Turbo ACC (SFE) 默认DNS服务器
-#sed -i 's#114.114.114.114#202.102.224.68,202.102.227.68,223.5.5.5,223.6.6.6,119.29.29.29,114.114.114.114#g' luci-app-sfe/luasrc/model/cbi/sfe.lua               #Turbo ACC (SFE) 默认DNS服务器
+#sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
+#sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
 echo -e '\nmsgid "DNSFilter"\nmsgstr "DNS过滤"' >> luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po #DNS过滤
 
 #替换https-dns-proxy.config默认配置文件,解决用LEDE源码加入passwall编译固件后DNS转发127.0.0.1#5053和12.0.0.1#5054问题
@@ -118,6 +118,7 @@ FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送通知
 #企业微信通知
+if [ -n "$FOLDERS" ]; then  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫源码同步失败，分支：Package_$matrix_target，失败列表：$FOLDERSX......"; fi
 # if [ -n "$FOLDERS" ]; then  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫源码同步失败，分支：Package_$matrix_target，失败列表：$FOLDERSX......"; else curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🎉源码同步成功，分支：Package_$matrix_target......"; fi
 #TG通知
 if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫源码同步失败，分支：Package_$matrix_target，失败列表：$FOLDERSX......"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉源码同步成功，分支：Package_$matrix_target......"; fi
