@@ -33,10 +33,10 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-dnsfilter
 # ####
 git clone https://github.com/linkease/ddnsto-openwrt luci-app-ddnsto
 git clone https://github.com/project-lede/luci-app-godproxy
-git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/pymumu/luci-app-smartdns
 git clone https://github.com/esirplayground/luci-app-poweroff
@@ -63,7 +63,6 @@ sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/cs
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
-echo -e '\nmsgid "DNSFilter"\nmsgstr "DNS过滤"' >> luci-app-dnsfilter/po/zh-cn/dnsfilter.zh-cn.po #DNS过滤
 
 #替换https-dns-proxy.config默认配置文件,解决用LEDE源码加入passwall编译固件后DNS转发127.0.0.1#5053和12.0.0.1#5054问题
 curl -fsSL  https://raw.githubusercontent.com/Lienol/openwrt-packages/19.07/net/https-dns-proxy/files/https-dns-proxy.config > https-dns-proxy/files/https-dns-proxy.config
@@ -96,10 +95,9 @@ luci-app-control-timewol
 luci-app-control-weburl
 luci-app-control-webrestriction
 luci-app-socat
-luci-app-turboacc
+luci-app-dnsfilter
 luci-app-ddnsto
 luci-app-godproxy
-luci-app-dnsfilter
 luci-app-serverchan
 luci-app-smartdns
 luci-app-poweroff
@@ -107,11 +105,12 @@ luci-app-oaf
 luci-app-smartinfo
 luci-app-autotimeset
 luci-app-jd-dailybonus
+luci-app-turboacc
+dnsproxy
+dnsforwarder
 node-request
 libcap
 redsocks2
-dnsproxy
-dnsforwarder
 EOF
 
 # 获取所有更新目录并显示
@@ -160,10 +159,9 @@ cat >> README.md <<EOF
 ###### luci-app-control-weburl   #网址过滤
 ###### luci-app-control-webrestriction   #访问限制
 ###### luci-app-socat   #端口转发
-###### luci-app-turboacc   #Turbo ACC 网络加速
+###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 ###### luci-app-godproxy   #GodProxy是基于koolproxyR Plus+重新整理而来
-###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-smartdns   #smartdns DNS加速
 ###### luci-app-poweroff    #关机（增加关机功能）
@@ -171,6 +169,7 @@ cat >> README.md <<EOF
 ###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-autotimeset   #定时设置，替代luci-app-autoreboot
 ###### luci-app-jd-dailybonus    #京东签到
+###### luci-app-turboacc   #Turbo ACC 网络加速
 
 
 #
