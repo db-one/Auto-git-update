@@ -33,7 +33,6 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-turboacc
 # ####
 git clone https://github.com/linkease/ddnsto-openwrt luci-app-ddnsto
 git clone https://github.com/project-lede/luci-app-godproxy
@@ -45,6 +44,11 @@ git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/sirpdboy/luci-app-autotimeset
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
+
+# Turbo ACC 网络加速
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-turboacc
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dnsproxy
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dnsforwarder
 
 # 一些依赖包
 git clone https://github.com/jerrykuku/node-request
@@ -106,6 +110,8 @@ luci-app-jd-dailybonus
 node-request
 libcap
 redsocks2
+dnsproxy
+dnsforwarder
 EOF
 
 # 获取所有更新目录并显示
@@ -154,7 +160,7 @@ cat >> README.md <<EOF
 ###### luci-app-control-weburl   #网址过滤
 ###### luci-app-control-webrestriction   #访问限制
 ###### luci-app-socat   #端口转发
-###### luci-app-turboacc   ##Linux Flow Offload Forwarding 转发加速引擎
+###### luci-app-turboacc   #Turbo ACC 网络加速
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 ###### luci-app-godproxy   #GodProxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
