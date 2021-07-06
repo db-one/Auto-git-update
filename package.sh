@@ -3,7 +3,8 @@
 # 2333
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
 svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
-svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
+svn co https://github.com/db-one/openwrt-packages/trunk/haproxy
+#svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 git clone https://github.com/fw876/helloworld
