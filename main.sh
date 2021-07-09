@@ -12,6 +12,8 @@ svn co https://github.com/ag2s20150909/TTS/trunk/release Microsoft_TTS #微软TT
 cat >> README.md <<EOF
 # 放点备份文件
 
+[ 更新脚本地址](https://github.com/db-one/Auto-git-update)
+
 EOF
 
 rm -rf .svn
