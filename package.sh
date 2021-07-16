@@ -34,9 +34,10 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-dnsfilter
 # ####
+git clone https://github.com/garypang13/luci-app-dnsfilter
 git clone https://github.com/linkease/ddnsto-openwrt luci-app-ddnsto
+git clone https://github.com/small-5/luci-app-adblock-plus
 git clone https://github.com/project-lede/luci-app-godproxy
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/pymumu/luci-app-smartdns
@@ -98,6 +99,7 @@ luci-app-control-webrestriction
 luci-app-socat
 luci-app-dnsfilter
 luci-app-ddnsto
+luci-app-adblock-plus
 luci-app-godproxy
 luci-app-serverchan
 luci-app-smartdns
@@ -162,6 +164,7 @@ cat >> README.md <<EOF
 ###### luci-app-socat   #端口转发
 ###### luci-app-dnsfilter   #基于DNS的广告过滤，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
+###### luci-app-adblock-plus    #adblock-plus去广告插件
 ###### luci-app-godproxy   #GodProxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-smartdns   #smartdns DNS加速
