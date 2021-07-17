@@ -19,7 +19,6 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
 
 # 插件
-svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
 svn co https://github.com/db-one/openwrt-packages/trunk/luci-app-adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
