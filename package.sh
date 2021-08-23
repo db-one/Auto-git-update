@@ -185,14 +185,13 @@ cat >> README.md <<EOF
 
 EOF
 
-rm -rf .svn
-rm -rf ./*/.git
-rm -rf ./*/.svn
-rm -rf ./*/*/.svn
-rm -rf ./*/*/.git
-rm -rf ./*/LICENSE
-rm -rf ./*/readme.txt
-rm -f .gitattributes .gitignore
-# rm -rf ./*/README.md
+
+# 删除拉取插件后残留的.git和.svn,再随带删除各种README说明
+find . -name 'LICENSE' | xargs -i rm -rf {}
+find ./*/ -name '*.git' -o -name '*.github' | xargs -i rm -rf {}
+find . -name '*.svn' -o -name '*.ipk' | xargs -i rm -rf {}
+find . -name '.gitattributes' -o -name '.gitignore' | xargs -i rm -rf {}
+#find . -name '*.md' | xargs -i rm -rf {}
+
 exit 0
 
