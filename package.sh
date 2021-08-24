@@ -11,7 +11,7 @@ git clone https://github.com/fw876/helloworld
 git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
 # 主题
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial_new
 svn co https://github.com/Lienol/openwrt-luci/trunk/themes/luci-theme-material
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
 git clone https://github.com/jerrykuku/luci-app-argon-config
@@ -59,9 +59,9 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
 
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
-sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial/css/style.css #luci-theme-atmaterial主题微调
-sed -i '1226,1229d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
-sed -i '1241,1244d' luci-theme-atmaterial/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
+sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
@@ -76,7 +76,7 @@ https-dns-proxy
 haproxy
 helloworld
 luci-app-openclash
-luci-theme-atmaterial
+luci-theme-atmaterial_new
 luci-theme-material
 luci-theme-opentomcat
 luci-app-argon-config
@@ -142,7 +142,7 @@ cat >> README.md <<EOF
 ###### luci-app-openclash
 #
 ### 主题
-###### luci-theme-atmaterial   #atmaterial-三合一主题
+###### luci-theme-atmaterial_new   #atmaterial-三合一主题
 ###### luci-theme-material   #material-主题
 ###### luci-theme-opentomcat   #主题-opentomcat（仿kool固件主题）
 ###### luci-app-argon-config    #argon主题设置（编译时候选上,在固件的‘系统’里面）
