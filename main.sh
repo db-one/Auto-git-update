@@ -1,7 +1,8 @@
  #!/bin/bash
  
-mkdir -p BaiDu-Exporter
-curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > BaiDu-Exporter/BaiduExporter.crx
+curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > BaiduExporter.crx
+
+curl -fsSL https://raw.githubusercontent.com/Rem0o/FanControl.Releases/master/FanControl.zip > FanControl.zip
 
 svn co https://github.com/tgbot-collection/YYeTsBot/trunk YYeTsBot #人人影视bot
 
