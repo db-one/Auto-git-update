@@ -55,7 +55,14 @@ jobs:
         cd ${{matrix.target}}
         rm -Rf *
         git rm --cache *
+
+        echo "执行脚本"
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
+
+        echo "复制文件..."
+        [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
+        cp $GITHUB_WORKSPACE/${{matrix.target}} $GITHUB_WORKSPACE/${{matrix.target}}
+
 
     - name: SSH远程连接服务器
       uses: P3TERX/ssh2actions@v1.0.0
@@ -68,8 +75,6 @@ jobs:
       env: 
         GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
       run: |
-        [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
-        [ -e $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md ] && cp $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -m "同步源码于$GIT_DATE" #|| true
