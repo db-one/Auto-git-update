@@ -61,7 +61,6 @@ jobs:
 
         echo "复制文件..."
         [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
-        cp $GITHUB_WORKSPACE/FILES/${{matrix.target}}/* $GITHUB_WORKSPACE/${{matrix.target}}
 
     - name: SSH远程连接服务器
       uses: P3TERX/ssh2actions@v1.0.0
