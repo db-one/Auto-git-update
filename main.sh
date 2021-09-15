@@ -1,13 +1,15 @@
  #!/bin/bash
  
-curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > BaiduExporter.crx
+curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > 百度网盘助手.crx
 
-curl -fsSL https://raw.githubusercontent.com/Rem0o/FanControl.Releases/master/FanControl.zip > FanControl.zip
+mkdir -p 风扇控制
+curl -fsSL https://raw.githubusercontent.com/Rem0o/FanControl.Releases/master/FanControl.zip > 风扇控制/FanControl.zip
+curl -fsSL https://raw.githubusercontent.com/Rem0o/FanControl.Releases/master/version.json > 风扇控制/版本.json
+
+mkdir -p 微软TTS
+svn co https://github.com/ag2s20150909/TTS/trunk/release 微软TTS #微软TTS
 
 svn co https://github.com/tgbot-collection/YYeTsBot/trunk YYeTsBot #人人影视bot
-
-svn co https://github.com/ag2s20150909/TTS/trunk/release Microsoft_TTS #微软TTS
-
 
 
 cat >> README.md <<EOF
