@@ -63,7 +63,7 @@ jobs:
         [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
 
         if [ -n "$(ls -A "$GITHUB_WORKSPACE/files/${{matrix.target}}" 2>/dev/null)" ]; then
-        cp $GITHUB_WORKSPACE/files/${{matrix.target}}/* $GITHUB_WORKSPACE/${{matrix.target}}
+        cp -rf $GITHUB_WORKSPACE/files/${{matrix.target}}/* $GITHUB_WORKSPACE/${{matrix.target}}
         fi
 
     - name: SSH远程连接服务器
