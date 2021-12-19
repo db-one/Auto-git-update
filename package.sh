@@ -49,8 +49,6 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 
 # Turbo ACC 网络加速
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-turboacc
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dnsproxy
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/dnsforwarder
 
 # 一些依赖包
 git clone https://github.com/jerrykuku/node-request
