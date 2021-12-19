@@ -5,8 +5,8 @@ on:
     inputs:
       update:
         description: '同步源码'
-        required: false
-  
+        default: '开始同步'
+
   schedule:
     - cron: 30 6,18 * * *
 
