@@ -107,8 +107,6 @@ luci-app-smartinfo
 luci-app-autotimeset
 luci-app-jd-dailybonus
 luci-app-turboacc
-dnsproxy
-dnsforwarder
 node-request
 libcap
 redsocks2
