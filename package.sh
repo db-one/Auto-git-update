@@ -37,7 +37,7 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 # ####
 git clone https://github.com/linkease/ddnsto-openwrt luci-app-ddnsto
 git clone https://github.com/small-5/luci-app-adblock-plus
-git clone https://github.com/project-lede/luci-app-godproxy
+git clone https://github.com/iwrt/luci-app-ikoolproxy
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/zzsj0928/luci-app-pushbot
 git clone https://github.com/pymumu/luci-app-smartdns
@@ -97,7 +97,7 @@ luci-app-control-webrestriction
 luci-app-socat
 luci-app-ddnsto
 luci-app-adblock-plus
-luci-app-godproxy
+luci-app-ikoolproxy
 luci-app-serverchan
 luci-app-pushbot
 luci-app-smartdns
@@ -160,7 +160,7 @@ cat >> README.md <<EOF
 ###### luci-app-socat   #端口转发
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 ###### luci-app-adblock-plus    #adblock-plus去广告插件，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
-###### luci-app-godproxy   #GodProxy是基于koolproxyR Plus+重新整理而来
+###### luci-app-ikoolproxy   #ikoolproxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-pushbot    #基于原版微信推送修改，支持更多协议
 ###### luci-app-smartdns   #smartdns DNS加速
