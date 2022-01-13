@@ -17,6 +17,7 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
 git clone https://github.com/jerrykuku/luci-app-argon-config
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
+git clone https://github.com/thinktip/luci-theme-neobird
 
 # 插件
 svn co https://github.com/db-one/openwrt-packages/trunk/luci-app-adguardhome
@@ -80,6 +81,7 @@ luci-theme-opentomcat
 luci-app-argon-config
 luci-theme-infinityfreedom
 luci-theme-rosy
+luci-theme-neobird
 luci-app-adguardhome
 luci-app-netdata
 netdata
@@ -144,6 +146,7 @@ cat >> README.md <<EOF
 ###### luci-app-argon-config    #argon主题设置（编译时候选上,在固件的‘系统’里面）
 ###### luci-theme-infinityfreedom    #透明主题
 ###### luci-theme-rosy    #主题-rosy
+###### luci-theme-neobird    #主题-小清新 neobird
 #
 ###  插件
 ###### luci-app-adguardhome   #adguardhome
