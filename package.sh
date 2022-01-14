@@ -64,6 +64,7 @@ sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brow
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
 sed -i 's/shadowsocksr/passwall/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #luci-theme-Neobird主题链接地址
 sed -i 's/width: 185px/width: 290px/g' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
+sed -i '$a\\n.cbi-value-title {\n    width: 23rem;\n    text-align: right;\n}\n'  luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
