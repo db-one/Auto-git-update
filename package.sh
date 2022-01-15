@@ -63,7 +63,7 @@ sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/
 sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
 sed -i 's/shadowsocksr/passwall/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #luci-theme-Neobird主题链接地址
-sed -i -e '204s/185/290/' -i -e '1468s/center/right/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
+sed -i -e '204s/185/290/' -e '1468s/center/right/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 sed -i '2336a\        text-align: center;' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 sed -i '1361s/width: 35%;/width: 25%;\n    text-align: right;/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 
