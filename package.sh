@@ -65,7 +65,7 @@ sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-
 sed -i 's/shadowsocksr/passwall/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #luci-theme-Neobird主题链接地址
 sed -i -e '146s/185/290/' -i -e '1468s/center/right/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 sed -i '2336a\        text-align: center;' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
-sed -i '1361s/width: 35%;/width: 25%;\n    text-align: right;/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
+sed -i '1361s/width: 35%;/width: 20%;\n    text-align: right;/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
