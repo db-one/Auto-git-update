@@ -35,8 +35,9 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
 svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
+svn co https://github.com/linkease/ddnsto-openwrt/trunk/ddnsto
 # ####
-git clone https://github.com/linkease/ddnsto-openwrt luci-app-ddnsto
 git clone https://github.com/small-5/luci-app-adblock-plus
 git clone https://github.com/iwrt/luci-app-ikoolproxy
 git clone https://github.com/tty228/luci-app-serverchan
@@ -103,6 +104,7 @@ luci-app-control-weburl
 luci-app-control-webrestriction
 luci-app-socat
 luci-app-ddnsto
+ddnsto
 luci-app-adblock-plus
 luci-app-ikoolproxy
 luci-app-serverchan
