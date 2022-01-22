@@ -39,7 +39,7 @@ svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
 svn co https://github.com/linkease/ddnsto-openwrt/trunk/ddnsto
 # ####
 git clone https://github.com/small-5/luci-app-adblock-plus
-git clone https://github.com/iwrt/luci-app-ikoolproxy
+git clone https://github.com/1wrt/luci-app-ikoolproxy
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/zzsj0928/luci-app-pushbot
 git clone https://github.com/pymumu/luci-app-smartdns
