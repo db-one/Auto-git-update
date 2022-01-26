@@ -64,10 +64,12 @@ sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial/css/
 sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #luci-theme-atmaterial主题微调
 sed -i '1366,1369' luci-theme-opentomcat/files/htdocs/css/style.css #luci-theme-opentomcat主题微调
-sed -i -e 's/shadowsocksr/passwall/g' -e 's/admin">/flashops">/' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #luci-theme-Neobird主题链接地址
-sed -i -e 's/185/290/g' -e '1480s/center/right/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
+sed -i -e 's/shadowsocksr/passwall/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #luci-theme-Neobird主题链接地址
+sed -i 's/185/290/g' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 sed -i '/width: 42%/a\        text-align: center;' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
-sed -i  -e '/padding: 13px 10px/a\    text-align: right;' -e '1372s/35/20/' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
+sed -i '/padding: 13px 10px/a\    text-align: right;' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
+num=`sed -n  -e '/padding: 13px 10px/=' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css` && num=`expr $num - 2` && sed -i "${num}s/35/20/g" luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
+num=`sed -n  -e '/line-height: 20px/=' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css` && num=`expr $num + 11` && sed -i "${num}s/center/right/g" luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #luci-theme-Neobird主题微调
 
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
