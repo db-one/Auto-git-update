@@ -66,9 +66,10 @@ sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brow
 sed -i '1366,1369d' luci-theme-opentomcat/files/htdocs/css/style.css #OpenTomcat主题输入框调大
 sed -i -e 's/shadowsocksr/passwall/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
 sed -i '/padding: 13px 10px 5px 3px/a\    text-align: right;' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #Neobird主题子标题居右
+sed -i '/margin-bottom: .25rem/a\        text-align: left;' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #Neobird主题移动版子标题居左
 num=`sed -n  -e '/padding: 13px 10px 5px 3px/=' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css` && num=`expr $num - 2` && sed -i "${num}s/35/20/g" luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #Neobird主题数据框左移
-num=`sed -n  -e '/margin-bottom: .25rem/=' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css` && num=`expr $num + 1` && sed -i "${num}s/center/left/g" luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #Neobird主题移动版子标题居左
 num=`sed -n  -e '/.main > .main-left > .nav > li a {/=' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css` && num=`expr $num + 5` && sed -i "${num}d" luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #Neobird主题左侧分类取消加粗
+num=`sed -n  -e '/.cbi-page-actions {/=' luci-theme-neobird/htdocs/luci-static/neobird/css/style.css` && num=`expr $num + 1` && sed -i "${num}s/center/right/g" luci-theme-neobird/htdocs/luci-static/neobird/css/style.css #Neobird主题保存应用按钮靠右
 
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
