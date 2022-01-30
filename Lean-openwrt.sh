@@ -6,19 +6,20 @@ git clone  https://github.com/coolsnowwolf/luci
 git clone  https://github.com/fw876/helloworld
 
 
-# 检测同步是否完成
-folder1=lede
-folder2=packages
-folder3=luci
-folder4=helloworld
+# 生成完整目录清单
+cat >> Update.md <<EOF
+lede
+packages
+luci
+helloworld
+EOF
 
-if [ -d "$folder1" ];then  echo "$folder1 成功";  else  echo "$folder1 失败"; fi | tee -a FOLDERS.md
-if [ -d "$folder2" ];then  echo "$folder2 成功";  else  echo "$folder2 失败"; fi | tee -a FOLDERS.md
-if [ -d "$folder3" ];then  echo "$folder3 成功";  else  echo "$folder3 失败"; fi | tee -a FOLDERS.md
-if [ -d "$folder4" ];then  echo "$folder4 成功";  else  echo "$folder4 失败"; fi | tee -a FOLDERS.md
+# 获取所有更新目录并显示
+ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v 'main.sh' | grep -v '18.06.sh' | grep -v '19.07.sh' | grep -v 'package.sh' | grep -v 'Lean-openwrt.sh' | grep -v 'Lienol-openwrt.sh' >> UpdateList.md
 
+# 对比Update.md文件里没有的内容，并生成变量
 echo 缺失包列表
-FOLDERS=`grep 失败 FOLDERS.md`
+FOLDERS=`grep -Fxvf UpdateList.md Update.md`
 FOLDERSX=`echo $FOLDERS | sed 's/ /、/g'`;echo $FOLDERSX
 
 # 判断变量值，如果有效发送通知
@@ -27,8 +28,10 @@ if [ -n "$FOLDERS" ]; then  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WOR
 # if [ -n "$FOLDERS" ]; then  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫源码同步失败，分支：$matrix_target，失败列表：$FOLDERSX......"; else curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🎉源码同步成功，分支：$matrix_target......"; fi
 #TG通知
 if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫源码同步失败,分支:$matrix_target，失败列表:$FOLDERSX......"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉源码同步成功,分支:$matrix_target......"; fi   >/dev/null 2>&1 && echo "ok..."
-rm -rf FOLDERS.md
 
+# 删除对比更新目录列表
+rm -rf Update.md
+rm -rf UpdateList.md
 
 cat >> README.md <<EOF
 # [Lean和lienol的源码定时备份]

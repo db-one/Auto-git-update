@@ -126,7 +126,7 @@ redsocks2
 EOF
 
 # 获取所有更新目录并显示
-ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v '18.06.sh' | grep -v '19.07.sh' | grep -v 'package.sh' >> UpdateList.md
+ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v 'main.sh' | grep -v '18.06.sh' | grep -v '19.07.sh' | grep -v 'package.sh' | grep -v 'Lean-openwrt.sh' | grep -v 'Lienol-openwrt.sh' >> UpdateList.md
 
 # 对比Update.md文件里没有的内容，并生成变量
 echo 缺失包列表
@@ -139,6 +139,7 @@ if [ -n "$FOLDERS" ]; then  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WOR
 # if [ -n "$FOLDERS" ]; then  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫源码同步失败，分支：Package_$matrix_target，失败列表：$FOLDERSX......"; else curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🎉源码同步成功，分支：Package_$matrix_target......"; fi
 #TG通知
 if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫源码同步失败,分支:Package_$matrix_target，失败列表:$FOLDERSX......"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉源码同步成功,分支:Package_$matrix_target......"; fi   >/dev/null 2>&1 && echo "ok..."
+
 # 删除对比更新目录列表
 rm -rf Update.md
 rm -rf UpdateList.md
