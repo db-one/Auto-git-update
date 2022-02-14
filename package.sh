@@ -53,9 +53,9 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-turboacc
 
 # 一些依赖包
-git clone https://github.com/jerrykuku/node-request
+git clone https://github.com/jerrykuku/node-request #luci-app-jd-dailybonus依赖
 svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
+svn co https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
