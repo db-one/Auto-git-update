@@ -50,7 +50,7 @@ git clone https://github.com/sirpdboy/luci-app-autotimeset
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 
 # Turbo ACC 网络加速
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-turboacc
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
 
 # 一些依赖包
 git clone https://github.com/jerrykuku/node-request #luci-app-jd-dailybonus依赖
