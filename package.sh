@@ -10,6 +10,9 @@ svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
 git clone https://github.com/fw876/helloworld
 git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
+# 恢复缺失
+git clone https://github.com/db-one/dbone-packages -b 18.06 && cd dbone-packages && git reset --hard 79ca6042fef91844763f2d5bf2eb92ddb72349c0 && cd ../ && mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall && rm -rf dbone-packages
+
 # 主题
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial_new
 svn co https://github.com/Lienol/openwrt-luci/trunk/themes/luci-theme-material
@@ -81,6 +84,7 @@ num=`sed -n  -e '/background-color: var(--badgebgColor);/=' $Neobird` && num=`ex
 
 # 生成完整目录清单
 cat >> Update.md <<EOF
+luci-app-passwall
 passwall
 https-dns-proxy
 haproxy
@@ -127,6 +131,7 @@ redsocks2
 EOF
 
 # 获取所有更新目录并显示
+ls passwall | grep -o 'luci-app-passwall' >> UpdateList.md
 ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v 'main.sh' | grep -v '18.06.sh' | grep -v '19.07.sh' | grep -v 'package.sh' | grep -v 'Lean-openwrt.sh' | grep -v 'Lienol-openwrt.sh' >> UpdateList.md
 
 # 对比Update.md文件里没有的内容，并生成变量
