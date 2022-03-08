@@ -11,7 +11,13 @@ git clone https://github.com/fw876/helloworld
 git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
 # 恢复缺失
-git clone https://github.com/db-one/dbone-packages -b 18.06 && cd dbone-packages && git reset --hard 79ca6042fef91844763f2d5bf2eb92ddb72349c0 && cd ../ && mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall && rm -rf dbone-packages
+if [ ! -d "passwall/luci-app-passwall" ];then
+  git clone https://github.com/db-one/dbone-packages -b 18.06
+  cd dbone-packages && git reset --hard 79ca6042fef91844763f2d5bf2eb92ddb72349c0
+  cd ../ && mkdir passwall
+  mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
+  rm -rf dbone-packages
+fi
 
 # 主题
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial_new
