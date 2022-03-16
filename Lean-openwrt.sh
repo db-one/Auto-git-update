@@ -4,7 +4,8 @@ git clone  https://github.com/coolsnowwolf/lede
 git clone  https://github.com/coolsnowwolf/packages
 git clone  https://github.com/coolsnowwolf/luci
 git clone  https://github.com/fw876/helloworld
-
+git clone https://github.com/xiaorouji/openwrt-passwall passwall
+git clone https://github.com/xiaorouji/openwrt-passwall passwall/luci-app-passwall -b luci
 
 # 生成完整目录清单
 cat >> Update.md <<EOF
@@ -12,6 +13,7 @@ lede
 packages
 luci
 helloworld
+passwall
 EOF
 
 # 获取所有更新目录并显示

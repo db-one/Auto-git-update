@@ -4,7 +4,6 @@ git clone https://github.com/Lienol/openwrt
 git clone https://github.com/Lienol/openwrt-package package
 git clone https://github.com/Lienol/openwrt-packages packages -b 19.07
 git clone https://github.com/Lienol/openwrt-luci luci -b 18.06
-git clone https://github.com/xiaorouji/openwrt-passwall passwall
 
 # 生成完整目录清单
 cat >> Update.md <<EOF
@@ -12,7 +11,6 @@ openwrt
 package
 packages
 luci
-passwall
 EOF
 
 # 获取所有更新目录并显示
