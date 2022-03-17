@@ -2,7 +2,7 @@
 
 # 2333
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
-git clone https://github.com/xiaorouji/openwrt-passwall passwall -b luci
+svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall passwall/luci-app-passwall
 svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
 #svn co https://github.com/db-one/openwrt-packages/trunk/haproxy
 svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
@@ -14,6 +14,7 @@ git clone https://github.com/vernesong/OpenClash.git && mv -f OpenClash/luci-app
 # 恢复缺失
 if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
+  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
   cd dbone-packages && git reset --hard 79ca6042fef91844763f2d5bf2eb92ddb72349c0
   cd ../ && mkdir passwall
