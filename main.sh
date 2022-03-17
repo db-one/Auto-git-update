@@ -1,5 +1,5 @@
  #!/bin/bash
- 
+
 curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > 百度网盘助手.crx
 
 mkdir -p 风扇控制
@@ -8,6 +8,13 @@ curl -fsSL https://raw.githubusercontent.com/Rem0o/FanControl.Releases/master/ve
 
 mkdir -p 微软TTS
 svn co https://github.com/ag2s20150909/TTS/trunk/release 微软TTS
+
+
+mkdir -p CloudflareSpeedTest
+curl -fsSL https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.0.3/CloudflareST_linux_amd64.tar.gz > CloudflareST_linux_amd64.tar.gz
+tar -zxf CloudflareST_linux_amd64.tar.gz -C ./CloudflareSpeedTest
+rm -r CloudflareST_linux_amd64.tar.gz
+chmod +x CloudflareSpeedTest/CloudflareST
 
 
 cat >> README.md <<EOF
