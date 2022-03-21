@@ -69,6 +69,8 @@ git clone https://github.com/jerrykuku/node-request #luci-app-jd-dailybonus依�
 svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
 svn co https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
+sed -i -e 's/stats refresh 30s/stats refresh 2s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为2秒
+sed -i 's@.*stats admin if TRUE*@#&@g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #去除haproxy控制台管理
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
 sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial/css/style.css #Atmaterial主题输入框调大
