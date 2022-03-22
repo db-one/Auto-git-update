@@ -16,7 +16,7 @@ if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 0cfd3413a482dd624bc3a1d2bb9b465677be5bdf
+  cd dbone-packages && git reset --hard d8151a5fccbf84f25dafad56ef753dd166a40836
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
@@ -35,7 +35,6 @@ git clone https://github.com/thinktip/luci-theme-neobird
 svn co https://github.com/db-one/openwrt-packages/trunk/luci-app-adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit
@@ -50,7 +49,6 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
 svn co https://github.com/linkease/ddnsto-openwrt/trunk/ddnsto
 # ####
-git clone https://github.com/small-5/luci-app-adblock-plus
 git clone https://github.com/1wrt/luci-app-ikoolproxy
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/zzsj0928/luci-app-pushbot
@@ -111,7 +109,6 @@ luci-theme-neobird
 luci-app-adguardhome
 luci-app-netdata
 netdata
-luci-app-koolddns
 luci-app-aliddns
 luci-app-eqos
 cpulimit
@@ -125,7 +122,6 @@ luci-app-control-webrestriction
 luci-app-socat
 luci-app-ddnsto
 ddnsto
-luci-app-adblock-plus
 luci-app-ikoolproxy
 luci-app-serverchan
 luci-app-pushbot
@@ -180,7 +176,6 @@ cat >> README.md <<EOF
 ###  插件
 ###### luci-app-adguardhome   #adguardhome
 ###### luci-app-netdata   #netdata信息监控
-###### luci-app-koolddns   #kool论坛的DNS
 ###### luci-app-aliddns    #aliddns
 ###### luci-app-eqos    #内网控速 内网IP限速工具
 ###### luci-app-cpulimit   #CPU性能限制
@@ -191,7 +186,6 @@ cat >> README.md <<EOF
 ###### luci-app-control-webrestriction   #访问限制
 ###### luci-app-socat   #端口转发
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
-###### luci-app-adblock-plus    #adblock-plus去广告插件，支持 AdGuardHome/Host/DNSMASQ/Domain 格式的规则订阅
 ###### luci-app-ikoolproxy   #ikoolproxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-pushbot    #基于原版微信推送修改，支持更多协议
