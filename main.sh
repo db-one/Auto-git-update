@@ -14,7 +14,11 @@ mkdir -p CloudflareSpeedTest
 curl -fsSL https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.0.3/CloudflareST_linux_amd64.tar.gz > CloudflareST_linux_amd64.tar.gz
 tar -zxf CloudflareST_linux_amd64.tar.gz -C ./CloudflareSpeedTest
 rm -r CloudflareST_linux_amd64.tar.gz
-chmod +x CloudflareSpeedTest/CloudflareST
+
+mkdir -p CloudflareST_linux_ARM64
+curl -fsSL https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.0.3/CloudflareST_linux_ARM64.tar.gz > CloudflareST_linux_ARM64.tar.gz
+tar -zxf CloudflareST_linux_ARM64.tar.gz -C ./CloudflareST_linux_ARM64
+rm -r CloudflareST_linux_ARM64.tar.gz
 
 
 cat >> README.md <<EOF
