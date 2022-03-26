@@ -10,15 +10,19 @@ mkdir -p 微软TTS
 svn co https://github.com/ag2s20150909/TTS/trunk/release 微软TTS
 rm -r 微软TTS/TTS_release*.apk.idsig
 
+# CloudflareST
+CloudflareST=v2.0.3
+# X86-64版本
 mkdir -p CloudflareSpeedTest
-curl -fsSL https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.0.3/CloudflareST_linux_amd64.tar.gz > CloudflareST_linux_amd64.tar.gz
+curl -fsSL https://github.com/XIU2/CloudflareSpeedTest/releases/download/$CloudflareST/CloudflareST_linux_amd64.tar.gz > CloudflareST_linux_amd64.tar.gz
 tar -zxf CloudflareST_linux_amd64.tar.gz -C ./CloudflareSpeedTest
 rm -r CloudflareST_linux_amd64.tar.gz
-
-mkdir -p CloudflareST_linux_ARM64
-curl -fsSL https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.0.3/CloudflareST_linux_ARM64.tar.gz > CloudflareST_linux_ARM64.tar.gz
-tar -zxf CloudflareST_linux_ARM64.tar.gz -C ./CloudflareST_linux_ARM64
-rm -r CloudflareST_linux_ARM64.tar.gz
+# ARM64版本
+mkdir -p CloudflareSpeedTest_ARM64
+curl -fsSL https://github.com/XIU2/CloudflareSpeedTest/releases/download/$CloudflareST/CloudflareST_linux_ARM64.tar.gz > CloudflareST_linux_ARM64.tar.gz
+tar -zxf CloudflareST_linux_ARM64.tar.gz -C ./CloudflareSpeedTest_ARM64
+mv -f CloudflareSpeedTest_ARM64/CloudflareST ./CloudflareSpeedTest/CloudflareST_ARM64
+rm -r CloudflareST_linux_ARM64.tar.gz CloudflareSpeedTest_ARM64
 
 
 cat >> README.md <<EOF
