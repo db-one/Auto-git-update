@@ -3,6 +3,7 @@
 # 2333
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall passwall/luci-app-passwall
+svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 passwall/luci-app-passwall2
 svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
 #svn co https://github.com/db-one/openwrt-packages/trunk/haproxy
 svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
@@ -16,7 +17,7 @@ if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard d8151a5fccbf84f25dafad56ef753dd166a40836
+  cd dbone-packages && git reset --hard 3cac0f933795818d786627d4fcafb8b700983969
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
@@ -93,8 +94,9 @@ num=`sed -n  -e '/background-color: var(--badgebgColor);/=' $Neobird` && num=`ex
 
 # 生成完整目录清单
 cat >> Update.md <<EOF
-luci-app-passwall
 passwall
+luci-app-passwall
+luci-app-passwall2
 https-dns-proxy
 haproxy
 helloworld
@@ -138,7 +140,7 @@ redsocks2
 EOF
 
 # 获取所有更新目录并显示
-ls passwall | grep -o 'luci-app-passwall' >> UpdateList.md
+ls passwall | grep 'luci-app-passwall*' >> UpdateList.md
 ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v 'main.sh' | grep -v '18.06.sh' | grep -v '19.07.sh' | grep -v 'package.sh' | grep -v 'Lean-openwrt.sh' | grep -v 'Lienol-openwrt.sh' >> UpdateList.md
 
 # 对比Update.md文件里没有的内容，并生成变量
