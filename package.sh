@@ -17,7 +17,7 @@ if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 3cac0f933795818d786627d4fcafb8b700983969
+  cd dbone-packages && git reset --hard 467b715e63eacad2e8dfb7a1ac37e670ce349b45
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
@@ -68,7 +68,7 @@ git clone https://github.com/jerrykuku/node-request #luci-app-jd-dailybonus依�
 svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
 svn co https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
-sed -i -e 's/stats refresh 30s/stats refresh 2s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为2秒
+sed -i -e 's/stats refresh 30s/stats refresh 3s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为3秒
 sed -i 's@.*stats admin if TRUE*@#&@g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #去除haproxy控制台管理
 
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
