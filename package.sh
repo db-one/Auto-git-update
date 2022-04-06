@@ -192,8 +192,9 @@ cat >> README.md <<EOF
 
 
 EOF
-package='Package_'
-export package
+
+# 设置变量
+package='Package_' && export package
 # 调用通知
 /bin/bash ../wxtg.sh
 
