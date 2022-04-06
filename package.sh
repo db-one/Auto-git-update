@@ -192,7 +192,7 @@ cat >> README.md <<EOF
 
 
 EOF
-Package=Package_
+package=`Package_`
 # 调用通知
 /bin/bash ../wxtg.sh
 
