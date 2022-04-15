@@ -10,6 +10,12 @@ mkdir -p 微软TTS
 svn co https://github.com/ag2s20150909/TTS/trunk/release 微软TTS
 rm -r 微软TTS/TTS_release*.apk.idsig
 
+# 阅读 服务器版
+git clone https://github.com/hectorqin/reader
+
+
+
+
 # CloudflareST
 CloudflareST=v2.0.3
 # X86-64版本
