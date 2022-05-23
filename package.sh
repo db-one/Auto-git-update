@@ -78,7 +78,7 @@ sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brow
 sed -i '1366,1369d' luci-theme-opentomcat/files/htdocs/css/style.css #OpenTomcat主题输入框调大
 
 
-sed -i -e 's/shadowsocksr/passwall/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
+sed -i -e 's/shadowsocksr/openclash/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
 Neobird="luci-theme-neobird/htdocs/luci-static/neobird/css/style.css"
 sed -i '/padding: 13px 10px 5px 3px/a\    text-align: right;' $Neobird #Neobird主题子标题居右
 sed -i '/margin-bottom: .25rem/a\        text-align: left;' $Neobird #Neobird主题移动版子标题居左
