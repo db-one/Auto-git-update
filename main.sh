@@ -13,7 +13,11 @@ rm -r 微软TTS/TTS_release*.apk.idsig
 # 阅读 服务器版
 git clone https://github.com/hectorqin/reader
 
-
+# 自建规则转换
+mkdir -p sub-web
+git clone https://github.com/tindy2013/subconverter sub-web/subconverter
+git clone https://github.com/CareyWang/sub-web sub-web/sub-web
+git clone https://github.com/281677160/agent sub-web/agent
 
 
 # CloudflareST
