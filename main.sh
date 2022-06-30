@@ -13,6 +13,9 @@ rm -r 微软TTS/TTS_release*.apk.idsig
 # 阅读 服务器版
 git clone https://github.com/hectorqin/reader
 
+# 一些高清图标
+git clone https://github.com/xushier/HD-Icons
+
 # 自建规则转换
 mkdir -p sub-web
 git clone https://github.com/tindy2013/subconverter sub-web/subconverter
