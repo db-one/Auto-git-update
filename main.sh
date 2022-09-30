@@ -13,6 +13,9 @@ rm -r 微软TTS/TTS_release*.apk.idsig
 # 阅读 服务器版
 git clone https://github.com/hectorqin/reader
 
+# Fail2ban SSH Docker
+git clone https://github.com/crazy-max/docker-fail2ban Fail2ban-SSH-Docker
+
 # 一些高清图标
 git clone https://github.com/xushier/HD-Icons
 
