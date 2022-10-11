@@ -1,9 +1,10 @@
 #!/bin/bash
 
-git clone  https://github.com/coolsnowwolf/lede
-git clone  https://github.com/coolsnowwolf/packages
-git clone  https://github.com/coolsnowwolf/luci
-git clone  https://github.com/fw876/helloworld
+git clone https://github.com/coolsnowwolf/lede
+git clone https://github.com/coolsnowwolf/packages
+git clone https://github.com/coolsnowwolf/luci
+git clone https://github.com/coolsnowwolf/routing
+git clone https://github.com/fw876/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
 git clone https://github.com/xiaorouji/openwrt-passwall passwall/luci-app-passwall -b luci
 
@@ -12,6 +13,7 @@ cat >> Update.md <<EOF
 lede
 packages
 luci
+routing
 helloworld
 passwall
 EOF
