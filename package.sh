@@ -54,6 +54,9 @@ git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/zzsj0928/luci-app-pushbot
 git clone https://github.com/pymumu/luci-app-smartdns -b lede
 git clone https://github.com/esirplayground/luci-app-poweroff
+git clone https://github.com/sirpdboy/luci-app-poweroffdevice
+git clone https://github.com/xylz0928/luci-app-shutdown
+git clone https://github.com/sirpdboy/luci-app-wizard
 git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/sirpdboy/luci-app-autotimeset
@@ -128,6 +131,9 @@ luci-app-serverchan
 luci-app-pushbot
 luci-app-smartdns
 luci-app-poweroff
+luci-app-poweroffdevice
+luci-app-shutdown
+luci-app-wizard
 luci-app-oaf
 luci-app-smartinfo
 luci-app-autotimeset
@@ -175,6 +181,9 @@ cat >> README.md <<EOF
 ###### luci-app-pushbot    #基于原版微信推送修改，支持更多协议
 ###### luci-app-smartdns   #smartdns DNS加速
 ###### luci-app-poweroff    #关机（增加关机功能）
+###### luci-app-poweroffdevice    #关机（同上，增加关机功能）
+###### luci-app-shutdown    #关机重启（增加关机重启功能）
+###### luci-app-wizard    #设置向导
 ###### luci-app-oaf （OpenAppFilter）  #应用过滤 ，该模块只工作在路由模式， 旁路模式、桥模式不生效，还有和Turbo ACC 网络加速有冲突
 ###### luci-app-smartinfo #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-autotimeset   #定时设置，替代luci-app-autoreboot
