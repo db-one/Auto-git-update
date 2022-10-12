@@ -55,7 +55,7 @@ git clone https://github.com/1wrt/luci-app-ikoolproxy
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/zzsj0928/luci-app-pushbot
 git clone https://github.com/pymumu/luci-app-smartdns -b lede
-git clone https://github.com/esirplayground/luci-app-poweroff
+git clone https://github.com/BFTHome/luci-app-poweroff
 git clone https://github.com/sirpdboy/luci-app-poweroffdevice
 git clone https://github.com/xylz0928/luci-app-shutdown
 git clone https://github.com/sirpdboy/luci-app-wizard
