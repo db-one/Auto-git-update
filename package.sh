@@ -68,9 +68,11 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
 
 # 一些依赖包
+git clone https://github.com/sirpdboy/myautocore
 git clone https://github.com/jerrykuku/node-request #luci-app-jd-dailybonus依赖
 svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
 svn co https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
+
 
 sed -i -e 's/stats refresh 30s/stats refresh 3s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为3秒
 sed -i 's@.*stats admin if TRUE*@#&@g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #去除haproxy控制台管理
@@ -142,6 +144,7 @@ luci-app-smartinfo
 luci-app-autotimeset
 luci-app-jd-dailybonus
 luci-app-turboacc
+myautocore
 node-request
 libcap
 redsocks2
@@ -193,6 +196,9 @@ cat >> README.md <<EOF
 ###### luci-app-autotimeset   #定时设置，替代luci-app-autoreboot
 ###### luci-app-jd-dailybonus    #京东签到
 ###### luci-app-turboacc   #Turbo ACC 网络加速
+#
+###  依赖
+myautocore   #加强版的预览信息autocore，可显示温度，网卡MAC，时间等详细信息，需删除原版autocore
 
 
 #
