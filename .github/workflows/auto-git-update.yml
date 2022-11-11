@@ -75,7 +75,7 @@ jobs:
         git push --quiet "https://${{ secrets.GIT_USER_TOKEN }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
     - name: 删除运行记录
-      uses: db-one/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@v2
       with:
         retain_days: 3     #保留最后多少记录不删除
         keep_minimum_runs: 0
