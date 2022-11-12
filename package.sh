@@ -33,7 +33,7 @@ git clone https://github.com/rosywrt/luci-theme-rosy
 git clone https://github.com/thinktip/luci-theme-neobird
 
 # 插件
-svn co https://github.com/shidahuilang/openwrt-packages/trunk/luci-app-adguardhome
+svn co https://github.com/281677160/openwrt-package/trunk/luci-app-adguardhome
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
