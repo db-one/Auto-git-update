@@ -70,7 +70,6 @@ svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
 git clone https://github.com/db-one/myautocore
 git clone https://github.com/jerrykuku/node-request #luci-app-jd-dailybonus依赖
 svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
-svn co https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
 
 sed -i -e 's/stats refresh 30s/stats refresh 3s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为3秒
@@ -145,7 +144,6 @@ luci-app-turboacc
 myautocore
 node-request
 libcap
-redsocks2
 EOF
 
 # 获取二级目录并显示
