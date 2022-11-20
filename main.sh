@@ -1,5 +1,9 @@
  #!/bin/bash
 
+#一键DD系统
+mkdir -p Linux
+curl -fsSL https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh > Linux/InstallNET.sh
+
 curl -fsSL https://raw.githubusercontent.com/acgotaku/BaiduExporter/master/BaiduExporter.crx > 百度网盘助手.crx
 
 mkdir -p 风扇控制
