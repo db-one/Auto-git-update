@@ -92,7 +92,7 @@ num=`sed -n -e '/background-color: var(--badgebgColor);/=' $Neobird` && num=`exp
 patch -p0 luci-theme-neobird/htdocs/luci-static/neobird/js/script.js ../patch.file/luci-theme-neobird.script.js.patch #Neobird主题菜单自动缩回
 
 # OpenClash删除机场登录
-patch -p0 luci-app-openclash/luasrc/model/cbi/openclash/settings.lua ../patch.file/settings.lua.patch #OpenClash删除机场登录
+patch -p0 luci-app-openclash/luasrc/model/cbi/openclash/settings.lua ../patch.file/luci-app-openclash.settings.lua.patch #OpenClash删除机场登录
 
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
