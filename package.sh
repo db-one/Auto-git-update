@@ -81,7 +81,7 @@ sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/
 sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #Atmaterial主题输入框调大
 sed -i '1366,1369d' luci-theme-opentomcat/files/htdocs/css/style.css #OpenTomcat主题输入框调大
 
-
+# Neobird主题微调
 sed -i -e 's/shadowsocksr/openclash/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
 Neobird="luci-theme-neobird/htdocs/luci-static/neobird/css/style.css"
 sed -i '/padding: 13px 10px 5px 3px/a\    text-align: right;' $Neobird #Neobird主题子标题居右
@@ -89,7 +89,10 @@ sed -i '/margin-bottom: .25rem/a\        text-align: left;' $Neobird #Neobird主
 num=`sed -n -e '/padding: 13px 10px 5px 3px/=' $Neobird` && num=`expr $num - 2` && sed -i "${num}s/35/20/g" $Neobird #Neobird主题数据框左移
 num=`sed -n -e '/.main > .main-left > .nav > li a {/=' $Neobird` && num=`expr $num + 5` && sed -i "${num}d" $Neobird #Neobird主题左侧分类取消加粗
 num=`sed -n -e '/background-color: var(--badgebgColor);/=' $Neobird` && num=`expr $num - 15` && sed -i "${num}s/center/right/g" $Neobird #Neobird主题保存应用按钮靠右
-patch -p0 luci-theme-neobird/htdocs/luci-static/neobird/js/script.js ../luci-theme-neobird.script.js.patch #Neobird主题菜单自动缩回
+patch -p0 luci-theme-neobird/htdocs/luci-static/neobird/js/script.js ../patch.file/luci-theme-neobird.script.js.patch #Neobird主题菜单自动缩回
+
+# OpenClash删除机场登录
+patch -p0 luci-app-openclash/luasrc/model/cbi/openclash/settings.lua ../patch.file/settings.lua.patch #OpenClash删除机场登录
 
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/luasrc/model/cbi/sfe.lua #Turbo ACC (SFE) 默认DNS服务器
