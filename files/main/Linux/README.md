@@ -21,9 +21,9 @@
 
 ```
 # CentOS 6.10 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -c 6.10 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -c 6.10 -v 64 -a -p xxxxxxxxx
 # CentOS 6.10 32位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -c 6.10 -v 32 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -c 6.10 -v 32 -a -p xxxxxxxxx
 ```
 
 ##### **重装为Debian：**
@@ -32,15 +32,15 @@ bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/Linux
 
 ```
 # Debian 8 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 8 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 8 -v 64 -a -p xxxxxxxxx
 # Debian 9 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -p xxxxxxxxx
 # Debian 10 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 10 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 10 -v 64 -a -p xxxxxxxxx
 # Debian 11 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -a -p xxxxxxxxx
 # Debian 11.5 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 11.5 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -d 11.5 -v 64 -a -p xxxxxxxxx
 ```
 
 ##### **重装为Ubuntu：**
@@ -49,15 +49,15 @@ bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/Linux
 
 ```
 # Ubuntu 12.04 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 12.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 12.04 -v 64 -a -p xxxxxxxxx
 # Ubuntu 14.04 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 14.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 14.04 -v 64 -a -p xxxxxxxxx
 # Ubuntu 16.04 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 16.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 16.04 -v 64 -a -p xxxxxxxxx
 # Ubuntu 18.04 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 18.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 18.04 -v 64 -a -p xxxxxxxxx
 # Ubuntu 20.04 64位：
-bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 20.04 -v 64 -a
+bash <(wget --no-check-certificate -qO- 'https://www.moeelf.com/attachment/LinuxShell/InstallNET.sh') -u 20.04 -v 64 -a -p xxxxxxxxx
 ```
 
 #### 重装系统后更改root密码
