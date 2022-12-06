@@ -1,5 +1,5 @@
 --- script.js
-+++ scriptnew.js
++++ script-new.js
 @@ -85,17 +85,23 @@
      $(".main > .main-left > .nav > .slide > .menu").click(function () {
          var ul = $(this).next(".slide-menu");
