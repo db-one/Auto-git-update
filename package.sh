@@ -39,7 +39,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit
-svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon luci-app-wrtbwmon
+svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zh luci-app-wrtbwmon
 svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
 svn co https://github.com/281677160/openwrt-package/trunk/luci-app-advanced
 svn co https://github.com/281677160/openwrt-package/trunk/luci-app-control-timewol
