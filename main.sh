@@ -29,6 +29,18 @@ git clone https://github.com/tindy2013/subconverter sub-web/subconverter
 git clone https://github.com/CareyWang/sub-web sub-web/sub-web
 git clone https://github.com/281677160/agent sub-web/agent
 
+# CloudflareST
+# X86-64版本
+mkdir -p CloudflareSpeedTest
+wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_amd64.tar.gz
+tar -zxf CloudflareST_linux_amd64.tar.gz -C ./CloudflareSpeedTest
+rm -r CloudflareST_linux_amd64.tar.gz
+# ARM64版本
+mkdir -p CloudflareSpeedTest_ARM64
+wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_ARM64.tar.gz > CloudflareST_linux_ARM64.tar.gz
+tar -zxf CloudflareST_linux_ARM64.tar.gz -C ./CloudflareSpeedTest_ARM64
+mv -f CloudflareSpeedTest_ARM64/CloudflareST ./CloudflareSpeedTest/CloudflareST_ARM64
+rm -r CloudflareST_linux_ARM64.tar.gz CloudflareSpeedTest_ARM64
 
 
 cat >> README.md <<EOF
