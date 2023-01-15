@@ -31,13 +31,14 @@ git clone https://github.com/281677160/agent sub-web/agent
 mkdir -p CloudflareST
 wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_amd64.tar.gz
 tar -zxf CloudflareST_linux_amd64.tar.gz -C ./CloudflareST
+mv -f CloudflareST/CloudflareST ./CloudflareST/CloudflareST_amd64
 rm -r CloudflareST_linux_amd64.tar.gz
 # ARM64版本
-mkdir -p CloudflareST_ARM64
-wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_ARM64.tar.gz
-tar -zxf CloudflareST_linux_ARM64.tar.gz -C ./CloudflareST_ARM64
-mv -f CloudflareST_ARM64/CloudflareST ./CloudflareST/CloudflareST_ARM64
-rm -r CloudflareST_linux_ARM64.tar.gz CloudflareST_ARM64
+mkdir -p CloudflareST_arm64
+wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_arm64.tar.gz
+tar -zxf CloudflareST_linux_arm64.tar.gz -C ./CloudflareST_arm64
+mv -f CloudflareST_arm64/CloudflareST ./CloudflareST/CloudflareST_arm64
+rm -r CloudflareST_linux_arm64.tar.gz CloudflareST_arm64
 
 
 cat >> README.md <<EOF
