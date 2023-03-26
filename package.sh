@@ -5,7 +5,6 @@ git clone https://github.com/xiaorouji/openwrt-passwall passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall passwall/luci-app-passwall
 svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 passwall/luci-app-passwall2
 svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
-#svn co https://github.com/db-one/openwrt-packages/trunk/haproxy
 svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
@@ -60,14 +59,12 @@ git clone https://github.com/sirpdboy/luci-app-wizard
 git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/sirpdboy/luci-app-autotimeset
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 
 # Turbo ACC 网络加速
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
 
 # 一些依赖包
 git clone https://github.com/db-one/myautocore
-git clone https://github.com/jerrykuku/node-request #luci-app-jd-dailybonus依赖
 svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
 
 
@@ -142,10 +139,8 @@ luci-app-wizard
 luci-app-oaf
 luci-app-smartinfo
 luci-app-autotimeset
-luci-app-jd-dailybonus
 luci-app-turboacc
 myautocore
-node-request
 libcap
 EOF
 
@@ -191,7 +186,6 @@ cat >> README.md <<EOF
 ###### luci-app-oaf （OpenAppFilter）    #应用过滤 ，该模块只工作在路由模式， 旁路模式、桥模式不生效，还有和Turbo ACC 网络加速有冲突
 ###### luci-app-smartinfo    #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-autotimeset    #定时设置，替代luci-app-autoreboot
-###### luci-app-jd-dailybonus    #京东签到
 ###### luci-app-turboacc    #Turbo ACC 网络加速
 #
 ###  依赖
