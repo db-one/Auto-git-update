@@ -1,6 +1,6 @@
 --- settings.lua
 +++ settings-new.lua
-@@ -1454,54 +1454,6 @@
+@@ -1180,54 +1180,6 @@
  o = s:taboption("debug", DummyValue, "", nil)
  o.template = "openclash/debug"
  
@@ -52,6 +52,6 @@
 -	o.value = font_red..bold_on..translate("Account not logged in")..bold_off..font_off
 -end
 -
- -- [[ Edit Custom DNS ]] --
- ds = m:section(TypedSection, "dns_servers", translate("Add Custom DNS Servers")..translate("(Take Effect After Choose Above)"))
- ds.anonymous = true
+ local t = {
+     {Commit, Apply}
+ }
