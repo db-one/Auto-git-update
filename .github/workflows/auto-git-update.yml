@@ -8,7 +8,7 @@ on:
         default: '开始同步'
 
   schedule:
-    - cron: 30 6,18 * * *
+    - cron: 30 5,16 * * *
 
 env: 
   TZ: Asia/Shanghai
