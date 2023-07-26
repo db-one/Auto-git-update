@@ -1,7 +1,7 @@
 
 
 
-命令中的 -d 后面为Debian版本号，-v 后面为64位/32位，【7、8、9、10 11】
+命令中的 -d 后面为Debian版本号，-v 后面为64位/32位，【7、8、9、10、11、12】
 
 `bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p xxxxxxxxx`
 
@@ -9,7 +9,7 @@
 
 
 
-网络重装 Debian 11 脚本
+网络重装 Debian 12 脚本
 
 `curl -fLO https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chmod a+rx debi.sh && ./debi.sh --install 'curl wget neofetch htop net-tools git' --hostname debian --bbr --timezone Asia/Shanghai --cloud-kernel --user root --password xxxxxxxxxxxxxxx && shutdown -r now`
 
