@@ -2,8 +2,8 @@
 
 # 2333
 git clone https://github.com/xiaorouji/openwrt-passwall passwall
-git clone https://github.com/xiaorouji/openwrt-passwall2 passwall
-git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall/packages
+svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 passwall/luci-app-passwall2
 svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
 svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
