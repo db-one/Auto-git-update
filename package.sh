@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # 2333
-git clone https://github.com/xiaorouji/openwrt-passwall passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall/packages
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall passwall/luci-app-passwall
 svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 passwall/luci-app-passwall2
 svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
 svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-git clone https://github.com/fw876/helloworld
+git clone https://github.com/fw876/helloworld -b main
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 git clone -b master --depth 1 https://github.com/vernesong/OpenClash && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
@@ -17,7 +17,7 @@ if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 467b715e63eacad2e8dfb7a1ac37e670ce349b45
+  cd dbone-packages && git reset --hard 8157516f20bca8efd808ecc9946d0f48f4eec8e6
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
@@ -102,6 +102,7 @@ sed -i '/openclash.config.enable/{N;d;}' luci-app-openclash/root/etc/uci-default
 # 生成完整目录清单
 cat >> Update.md <<EOF
 passwall
+packages
 luci-app-passwall
 luci-app-passwall2
 https-dns-proxy
@@ -146,7 +147,7 @@ libcap
 EOF
 
 # 获取二级目录并显示
-ls passwall | grep 'luci-app-passwall*' >> UpdateList.md
+ls passwall | grep -E 'packages|luci-app-passwall*' >> UpdateList.md
 
 
 cat >> README.md <<EOF
