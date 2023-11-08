@@ -1,11 +1,23 @@
+#
+#
+#
+#
+#
+
+
+
+
 name: 同步源码
 
 on:
   workflow_dispatch:
     inputs:
-      update:
-        description: '同步源码'
-        default: '开始同步'
+
+      SSH_ACTION:
+        description: '开始同步'
+        required: false
+        default: 'true'
+        type: boolean
 
   schedule:
     - cron: 30 5,16 * * *
