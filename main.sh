@@ -26,6 +26,8 @@ git clone https://github.com/tindy2013/subconverter sub-web/subconverter
 git clone https://github.com/CareyWang/sub-web sub-web/sub-web
 git clone https://github.com/281677160/agent sub-web/agent
 
+git clone https://github.com/youshandefeiyang/sub-web-modify sub-web-modify
+
 # CloudflareST
 # X86-64版本
 mkdir -p CloudflareST
