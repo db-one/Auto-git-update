@@ -5,8 +5,9 @@ git clone https://github.com/coolsnowwolf/packages
 git clone https://github.com/coolsnowwolf/luci
 git clone https://github.com/coolsnowwolf/routing
 git clone https://github.com/fw876/helloworld
-git clone https://github.com/xiaorouji/openwrt-passwall passwall
-git clone https://github.com/xiaorouji/openwrt-passwall passwall/luci-app-passwall -b luci
+git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall/packages
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall passwall/luci-app-passwall
+svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 passwall/luci-app-passwall2
 
 # 生成完整目录清单
 cat >> Update.md <<EOF

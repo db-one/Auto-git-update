@@ -8,7 +8,7 @@ svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
 svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-git clone https://github.com/fw876/helloworld -b main
+git clone https://github.com/fw876/helloworld
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 git clone -b master --depth 1 https://github.com/vernesong/OpenClash && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
