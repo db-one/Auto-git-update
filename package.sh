@@ -97,7 +97,7 @@ mv -f openwrt-package/luci-app-socat ./luci-app-socat
 rm -rf openwrt-package
 
 git clone --depth 1 https://github.com/linkease/nas-packages-luci
-mv -f nas-packages-luci/luci-app-ddnsto ./luci-app-ddnsto
+mv -f nas-packages-luci/luci/luci-app-ddnsto ./luci-app-ddnsto
 rm -rf nas-packages-luci
 
 git clone --depth 1 https://github.com/linkease/ddnsto-openwrt
