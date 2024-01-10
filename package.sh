@@ -1,53 +1,108 @@
 #!/bin/bash
 
 # 2333
-git clone https://github.com/xiaorouji/openwrt-passwall-packages passwall/packages
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall passwall/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 passwall/luci-app-passwall2
-svn co https://github.com/coolsnowwolf/packages/trunk/net/https-dns-proxy
-svn co https://github.com/coolsnowwolf/packages/trunk/net/haproxy
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
+# 新建目录
+mkdir passwall
+# 插件包
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages passwall/packages
+# luci-app-passwall
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall
+mv -f openwrt-passwall/luci-app-passwall ./passwall/luci-app-passwall
+rm -rf openwrt-passwall
+# luci-app-passwall2
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2
+mv -f openwrt-passwall2/luci-app-passwall2 ./passwall/luci-app-passwall2
+rm -rf openwrt-passwall2
+# helloworld
 git clone https://github.com/fw876/helloworld
-#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+# luci-app-openclash
 git clone -b master --depth 1 https://github.com/vernesong/OpenClash && mv -f OpenClash/luci-app-openclash ./ && rm -rf OpenClash
 
-# 恢复缺失
+
+# 恢复缺失passwall
 if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 8157516f20bca8efd808ecc9946d0f48f4eec8e6
+  cd dbone-packages && git reset --hard 9d6721478e889a1f7a0e0f17a497834bc5282382
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
 fi
+# 恢复缺失passwall2
+if [ ! -d "passwall/luci-app-passwall2" ];then
+  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall2缺失,从历史记录恢复......"
+  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall2缺失,从历史记录恢复......"
+  git clone https://github.com/db-one/dbone-packages -b 18.06
+  cd dbone-packages && git reset --hard 9d6721478e889a1f7a0e0f17a497834bc5282382
+  cd ../ && mkdir passwall
+  mv -f dbone-packages/passwall/luci-app-passwall2 ./passwall/luci-app-passwall2
+  rm -rf dbone-packages
+fi
+# 恢复缺失luci-app-openclash
+if [ ! -d "luci-app-openclash" ];then
+  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫OpenClash缺失,从历史记录恢复......"
+  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫OpenClash缺失,从历史记录恢复......"
+  git clone https://github.com/db-one/dbone-packages -b 18.06
+  cd dbone-packages && git reset --hard 9d6721478e889a1f7a0e0f17a497834bc5282382
+  cd ../ && mkdir passwall
+  mv -f dbone-packages/luci-app-openclash ./luci-app-openclash
+  rm -rf dbone-packages
+fi
 
 # 主题
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial_new
-svn co https://github.com/Lienol/openwrt-luci/trunk/themes/luci-theme-material
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-theme-opentomcat
+# 
+git clone --depth 1 https://github.com/kenzok8/openwrt-packages
+mv -f openwrt-packages/luci-theme-atmaterial_new ./luci-theme-atmaterial_new
+rm -rf openwrt-packages
+
+git clone --depth 1 https://github.com/Lienol/openwrt-luci
+mv -f openwrt-luci/themes/luci-theme-material ./luci-theme-material
+rm -rf openwrt-luci
+
+git clone --depth 1 https://github.com/sirpdboy/sirpdboy-package
+ mv -f sirpdboy-package/luci-theme-opentomcat ./luci-theme-opentomcat
+ rm -rf sirpdboy-package
+ 
+ # ####
 git clone https://github.com/jerrykuku/luci-app-argon-config
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
 git clone https://github.com/thinktip/luci-theme-neobird
 
 # 插件
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-adguardhome
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-eqos
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/cpulimit
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-cpulimit
-svn co https://github.com/firker/diy-ziyong/trunk/luci-app-wrtbwmon-zh luci-app-wrtbwmon
-svn co https://github.com/firker/diy-ziyong/trunk/wrtbwmon
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-advanced
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-control-timewol
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-control-weburl
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-control-webrestriction
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-socat
-svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
-svn co https://github.com/linkease/ddnsto-openwrt/trunk/ddnsto
+git clone --depth 1 https://github.com/kenzok8/openwrt-packages
+mv -f openwrt-packages/luci-app-aliddns ./luci-app-aliddns
+mv -f openwrt-packages/luci-app-eqos ./luci-app-eqos
+rm -rf openwrt-packages
+
+git clone --depth 1 https://github.com/sirpdboy/sirpdboy-package
+mv -f sirpdboy-package/luci-app-netdata ./luci-app-netdata
+mv -f sirpdboy-package/cpulimit ./cpulimit
+mv -f sirpdboy-package/luci-app-cpulimit ./luci-app-cpulimit
+rm -rf sirpdboy-package
+
+git clone --depth 1 https://github.com/firker/diy-ziyong
+mv -f diy-ziyong/luci-app-wrtbwmon-zh ./luci-app-wrtbwmon
+mv -f diy-ziyong/wrtbwmon ./wrtbwmon
+rm -rf diy-ziyong
+
+git clone --depth 1 https://github.com/281677160/openwrt-package
+mv -f openwrt-package/luci-app-adguardhome ./luci-app-adguardhome
+mv -f openwrt-package/luci-app-advanced ./luci-app-advanced
+mv -f openwrt-package/luci-app-control-timewol ./luci-app-control-timewol
+mv -f openwrt-package/luci-app-control-weburl ./luci-app-control-weburl
+mv -f openwrt-package/luci-app-control-webrestriction ./luci-app-control-webrestriction
+mv -f openwrt-package/luci-app-socat ./luci-app-socat
+rm -rf openwrt-package
+
+git clone --depth 1 https://github.com/linkease/nas-packages-luci
+mv -f nas-packages-luci/luci-app-ddnsto ./luci-app-ddnsto
+rm -rf nas-packages-luci
+
+git clone --depth 1 https://github.com/linkease/ddnsto-openwrt
+mv -f ddnsto-openwrt/ddnsto ./ddnsto
+rm -rf ddnsto-openwrt
 
 # ####
 git clone https://github.com/1wrt/luci-app-ikoolproxy
@@ -56,17 +111,23 @@ git clone https://github.com/zzsj0928/luci-app-pushbot
 git clone https://github.com/pymumu/luci-app-smartdns -b lede
 git clone https://github.com/db-one/luci-app-poweroff
 git clone https://github.com/xylz0928/luci-app-shutdown
-git clone https://github.com/sirpdboy/luci-app-wizard
 git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
+git clone https://github.com/sirpdboy/luci-app-wizard
 git clone https://github.com/sirpdboy/luci-app-autotimeset
 
 # Turbo ACC 网络加速
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
+git clone --depth 1 https://github.com/coolsnowwolf/luci
+mv -f luci/applications/luci-app-turboacc ./luci-app-turboacc
+rm -rf luci
+
 
 # 一些依赖包
 git clone https://github.com/db-one/myautocore
-svn co https://github.com/coolsnowwolf/lede/trunk/package/libs/libcap
+
+git clone --depth 1 https://github.com/coolsnowwolf/lede
+mv -f lede/package/libs/libcap ./libcap
+rm -rf lede
 
 
 sed -i -e 's/stats refresh 30s/stats refresh 3s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为3秒
@@ -105,8 +166,6 @@ passwall
 packages
 luci-app-passwall
 luci-app-passwall2
-https-dns-proxy
-haproxy
 helloworld
 luci-app-openclash
 luci-theme-atmaterial_new
