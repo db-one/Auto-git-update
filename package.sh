@@ -154,7 +154,7 @@ openclash="luci-app-openclash/root/etc/uci-defaults/luci-openclash"
 patch -p0 luci-app-openclash/luasrc/model/cbi/openclash/settings.lua ../patch.file/luci-app-openclash.settings.lua.patch #OpenClash删除机场登录
 sed -i '/openclash.config.enable/{N;d;}' $openclash #OpenClash恢复更新系统开机自启动
 sed -i '/exit/i\uci -q set openclash.config.dashboard_password="123456"' $openclash #设置默认控制面板登录密钥为123456
-sed -i '/exit/i\uci set openclash.@authentication[0].enabled="0"' $openclash #默认关闭SOCKS5/HTTP认证信息
+sed -i '/^#Set authentication$/,/^${uci_set}password=.*/d' $openclash #默认关闭SOCKS5/HTTP认证信息
 
 
 #sed -i 's#114.114.115.115#114.114.115.115,223.5.5.5,223.6.6.6,180.76.76.76,119.29.29.29,119.28.28.28,1.2.4.8,210.2.4.8#g' luci-app-sfe/root/etc/config/sfe #Turbo ACC (SFE) 默认DNS服务器
