@@ -69,6 +69,9 @@ git clone https://github.com/jerrykuku/luci-app-argon-config
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
 git clone https://github.com/thinktip/luci-theme-neobird
+git clone https://github.com/0x676e67/luci-theme-design
+git clone https://github.com/0x676e67/luci-app-design-config
+
 
 # 插件
 git clone --depth 1 https://github.com/kenzok8/openwrt-packages
@@ -178,6 +181,8 @@ luci-app-argon-config
 luci-theme-infinityfreedom
 luci-theme-rosy
 luci-theme-neobird
+luci-theme-design
+luci-app-design-config
 luci-app-adguardhome
 luci-app-netdata
 luci-app-aliddns
@@ -226,6 +231,8 @@ cat >> README.md <<EOF
 ###### luci-theme-infinityfreedom    #透明主题
 ###### luci-theme-rosy    #主题-rosy
 ###### luci-theme-neobird    #主题-小清新 Neobird
+###### luci-theme-design    #主题-design 基于Neobird修改
+###### luci-app-design-config    #design 主题设置
 #
 ###  插件
 ###### luci-app-adguardhome    #adguardhome
