@@ -24,7 +24,7 @@ if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 9d6721478e889a1f7a0e0f17a497834bc5282382
+  cd dbone-packages && git reset --hard 4b2927affb0e178e166b0280634be23453a1cc9d
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
@@ -34,7 +34,7 @@ if [ ! -d "passwall/luci-app-passwall2" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall2缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall2缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 9d6721478e889a1f7a0e0f17a497834bc5282382
+  cd dbone-packages && git reset --hard 4b2927affb0e178e166b0280634be23453a1cc9d
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall2 ./passwall/luci-app-passwall2
   rm -rf dbone-packages
@@ -44,7 +44,7 @@ if [ ! -d "luci-app-openclash" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫OpenClash缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫OpenClash缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 9d6721478e889a1f7a0e0f17a497834bc5282382
+  cd dbone-packages && git reset --hard 4b2927affb0e178e166b0280634be23453a1cc9d
   cd ../ && mkdir passwall
   mv -f dbone-packages/luci-app-openclash ./luci-app-openclash
   rm -rf dbone-packages
@@ -69,8 +69,8 @@ git clone https://github.com/jerrykuku/luci-app-argon-config
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
 git clone https://github.com/thinktip/luci-theme-neobird
-git clone https://github.com/0x676e67/luci-theme-design
-git clone https://github.com/0x676e67/luci-app-design-config
+git clone https://github.com/db-one/luci-theme-design
+git clone https://github.com/db-one/luci-app-design-config
 
 
 # 插件
