@@ -108,8 +108,10 @@ mv -f ddnsto-openwrt/ddnsto ./ddnsto
 rm -rf ddnsto-openwrt
 
 git clone --depth 1 https://github.com/coolsnowwolf/luci
-mv -f applications/luci-app-v2ray-server ./luci-app-v2ray-server
-rm -rf applications
+mv -f luci/applications/luci-app-v2ray-server ./luci-app-v2ray-server
+rm -rf luci
+mkdir luci-app-v2ray-server/po/zh_Hans
+cp luci-app-v2ray-server/po/zh-cn/v2ray_server.po luci-app-v2ray-server/po/zh_Hans/v2ray_server.po
 
 
 # ####
