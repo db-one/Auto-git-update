@@ -107,6 +107,11 @@ git clone --depth 1 https://github.com/linkease/ddnsto-openwrt
 mv -f ddnsto-openwrt/ddnsto ./ddnsto
 rm -rf ddnsto-openwrt
 
+git clone --depth 1 https://github.com/coolsnowwolf/luci
+mv -f applications/luci-app-v2ray-server ./luci-app-v2ray-server
+rm -rf applications
+
+
 # ####
 git clone https://github.com/1wrt/luci-app-ikoolproxy
 git clone https://github.com/tty228/luci-app-serverchan
@@ -198,6 +203,7 @@ luci-app-control-webrestriction
 luci-app-socat
 luci-app-ddnsto
 ddnsto
+luci-app-v2ray-server
 luci-app-ikoolproxy
 luci-app-serverchan
 luci-app-pushbot
@@ -247,6 +253,7 @@ cat >> README.md <<EOF
 ###### luci-app-control-webrestriction    #访问限制
 ###### luci-app-socat    #端口转发
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
+###### luci-app-v2ray-server   #V2ray服务端
 ###### luci-app-ikoolproxy   #ikoolproxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-pushbot    #基于原版微信推送修改，支持更多协议
