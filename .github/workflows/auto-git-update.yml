@@ -38,7 +38,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [main,18.06,19.07,Lean-openwrt]  #[main,18.06,19.07,Lean-openwrt,Lienol-openwrt]  
+        target: [main,18.06,23.05,Lean-openwrt]  #[main,18.06,23.05,Lean-openwrt,Lienol-openwrt]  
 
     steps:
     - name: 准备完成
