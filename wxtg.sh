@@ -1,7 +1,7 @@
  #!/bin/bash
 
 # 获取所有更新目录并显示
-ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v 'main.sh' | grep -v '18.06.sh' | grep -v '23.05.sh' | grep -v 'package.sh' | grep -v 'wxtg.sh' | grep -v 'Lean-openwrt.sh' | grep -v 'Lienol-openwrt.sh' >> UpdateList.md
+ls | grep -v 'Update.md' | grep -v 'UpdateList.md' | grep -v 'main.sh' | grep -v '18.06.sh' | grep -v '23.05.sh' | grep -v 'package.sh' | grep -v 'wxtg.sh' | grep -v 'Lean-openwrt.sh' | grep -v 'immortalwrt-openwrt.sh' >> UpdateList.md
 
 # 对比Update.md文件里没有的内容，并生成变量
 echo 缺失包列表
