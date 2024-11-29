@@ -5,6 +5,17 @@ git clone https://github.com/garypang13/luci-theme-edge -b 18.06
 git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06
 
 # 插件
+git clone --depth 1 https://github.com/coolsnowwolf/luci
+mv -f luci/applications/luci-app-v2ray-server ./luci-app-v2ray-server && mkdir luci-app-v2ray-server/po/zh_Hans && cp luci-app-v2ray-server/po/zh-cn/v2ray_server.po luci-app-v2ray-server/po/zh_Hans/v2ray_server.po
+mv -f luci/applications/luci-app-vlmcsd ./luci-app-vlmcsd
+mv -f luci/applications/luci-app-filetransfer ./luci-app-filetransfer
+rm -rf luci
+
+git clone --depth 1 https://github.com/coolsnowwolf/packages
+mv -f packages/net/vlmcsd ./vlmcsd
+rm -rf luci
+
+
 
 sed -i 's@e5effd@f8fbfe@g' luci-theme-edge/htdocs/luci-static/edge/cascade.css #luci-theme-edge主题颜色微调
 sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-static/edge/cascade.css #luci-theme-edge主题颜色微调
@@ -13,6 +24,10 @@ sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-sta
 cat >> Update.md <<EOF
 luci-theme-edge
 luci-theme-argon
+luci-app-v2ray-server
+luci-app-vlmcsd
+vlmcsd
+luci-app-filetransfer
 EOF
 
 
@@ -28,6 +43,10 @@ cat >> README.md <<EOF
 
 ###### luci-theme-edge    #主题-edge
 ###### luci-theme-argon    #新的argon主题
+#
+###### luci-app-v2ray-server   #V2ray服务端
+###### luci-app-vlmcsd          #KMS激活服务器
+###### luci-app-filetransfer   #文件传输
 #
 EOF
 
