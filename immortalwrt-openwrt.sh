@@ -16,8 +16,8 @@ cat >> README.md <<EOF
 # [ Lean 和 immortalwrt 的源码定时备份]
 
 
-[Lean](https://github.com/coolsnowwolf/lede)
-[ immortalwrt](https://github.com/immortalwrt/immortalwrt )
+- [Lean](https://github.com/coolsnowwolf/lede)
+- [ immortalwrt](https://github.com/immortalwrt/immortalwrt )
 
 
 
