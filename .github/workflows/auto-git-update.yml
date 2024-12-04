@@ -24,7 +24,7 @@ on:
 
 env: 
   TZ: Asia/Shanghai
-  GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
   WECHAT_WORK_URL: ${{ secrets.WECHAT_WORK_URL }}
   WECHAT_WORK_TOKEN: ${{ secrets.WECHAT_WORK_TOKEN }}
   TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -79,16 +79,18 @@ jobs:
 
     - name: 应用源码更新
       env: 
-        GITHUB_TOKEN: ${{ secrets.GIT_USER_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
       run: |
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -m "同步源码于$GIT_DATE" #|| true
-        git push --quiet "https://${{ secrets.GIT_USER_TOKEN }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
+        git push --quiet "https://${{ secrets.MY_GITHUB_TOKEN }}@github.com/db-one/dbone-packages.git" HEAD:${{matrix.target}}
 
     - name: 删除运行记录
       uses: Mattraks/delete-workflow-runs@v2
       with:
+        token: ${{ secrets.MY_GITHUB_TOKEN }}
+        repository: ${{ github.repository }}
         retain_days: 3     #保留最后多少记录不删除
         keep_minimum_runs: 0
 
