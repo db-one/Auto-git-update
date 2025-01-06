@@ -5,6 +5,9 @@ git clone https://github.com/garypang13/luci-theme-edge
 git clone https://github.com/jerrykuku/luci-theme-argon
 
 # 插件
+git clone https://github.com/morytyann/OpenWrt-mihomo
+
+
 git clone --depth 1 https://github.com/coolsnowwolf/luci -b openwrt-23.05
 mv -f luci/applications/luci-app-v2ray-server ./luci-app-v2ray-server && mkdir luci-app-v2ray-server/po/zh_Hans && cp luci-app-v2ray-server/po/zh-cn/v2ray_server.po luci-app-v2ray-server/po/zh_Hans/v2ray_server.po
 mv -f luci/applications/luci-app-vlmcsd ./luci-app-vlmcsd
@@ -24,6 +27,7 @@ sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-sta
 cat >> Update.md <<EOF
 luci-theme-edge
 luci-theme-argon
+OpenWrt-mihomo
 luci-app-v2ray-server
 luci-app-vlmcsd
 vlmcsd
@@ -47,6 +51,8 @@ cat >> README.md <<EOF
 ###### luci-app-v2ray-server   #V2ray服务端
 ###### luci-app-vlmcsd          #KMS激活服务器
 ###### luci-app-filetransfer   #文件传输
+#
+###### OpenWrt-mihomo   #mihomo插件
 #
 EOF
 
