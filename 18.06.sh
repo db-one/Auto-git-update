@@ -15,6 +15,8 @@ git clone --depth 1 https://github.com/coolsnowwolf/packages
 mv -f packages/net/vlmcsd ./vlmcsd
 rm -rf luci
 
+# 一些依赖包
+git clone https://github.com/db-one/myautocore
 
 
 sed -i 's@e5effd@f8fbfe@g' luci-theme-edge/htdocs/luci-static/edge/cascade.css #luci-theme-edge主题颜色微调
@@ -27,6 +29,7 @@ luci-theme-argon
 luci-app-v2ray-server
 luci-app-vlmcsd
 vlmcsd
+myautocore
 luci-app-filetransfer
 EOF
 
@@ -48,6 +51,9 @@ cat >> README.md <<EOF
 ###### luci-app-vlmcsd          #KMS激活服务器
 ###### luci-app-filetransfer   #文件传输
 #
+###  依赖
+myautocore    #加强版的预览信息autocore，可显示温度，网卡MAC，时间等详细信息，需删除原版autocore
+
 EOF
 
 # 调用通知
