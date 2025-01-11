@@ -6,7 +6,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06
 
 # 插件
 git clone --depth 1 https://github.com/coolsnowwolf/luci
-mv -f luci/applications/luci-app-v2ray-server ./luci-app-v2ray-server && mkdir luci-app-v2ray-server/po/zh_Hans && cp luci-app-v2ray-server/po/zh-cn/v2ray_server.po luci-app-v2ray-server/po/zh_Hans/v2ray_server.po
+mv -f luci/applications/luci-app-v2ray-server ./luci-app-v2ray-server
 mv -f luci/applications/luci-app-vlmcsd ./luci-app-vlmcsd
 mv -f luci/applications/luci-app-filetransfer ./luci-app-filetransfer
 rm -rf luci
