@@ -1,21 +1,5 @@
 #!/bin/bash
 
-svn_export() {
-# 参数1是分支名, 参数2是仓库子目录, 参数3是本地目标目录, 参数4仓库地址
-	trap 'rm -rf "$TMP_DIR"' 0 1 2 3
-	TMP_DIR="$(mktemp -d)" || exit 1
-	[ -d "$3" ] || mkdir -p "$3"
-	TGT_DIR="$(cd "$3"; pwd)"
-	cd "$TMP_DIR" && \
-	git init >/dev/null 2>&1 && \
-	git remote add -f origin "$4" >/dev/null 2>&1 && \
-	git checkout "remotes/origin/$1" -- "$2" && \
-	cd "$2" && cp -a . "$TGT_DIR/"
-}
-
-# svn_export "master" "target/linux/x86" "route" "https://github.com/coolsnowwolf/lede"
-
-
 # 2333
 # 新建目录
 mkdir passwall
@@ -93,6 +77,9 @@ git clone https://github.com/db-one/luci-app-design-config
 git clone --depth 1 https://github.com/kenzok8/openwrt-packages
 mv -f openwrt-packages/luci-app-aliddns ./luci-app-aliddns
 mv -f openwrt-packages/luci-app-eqos ./luci-app-eqos
+mv -f openwrt-packages/luci-app-istorex ./luci-app-istorex
+mv -f openwrt-packages/luci-app-quickstart ./luci-app-quickstart
+mv -f openwrt-packages/quickstart ./quickstart
 rm -rf openwrt-packages
 
 git clone --depth 1 https://github.com/sirpdboy/sirpdboy-package
@@ -136,12 +123,6 @@ git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/sirpdboy/luci-app-wizard
 git clone https://github.com/sirpdboy/luci-app-autotimeset
 
-
-# svn_export 包
-# 参数1是分支名, 参数2是仓库子目录, 参数3是本地目标目录, 参数4仓库地址
-svn_export "main" "luci-app-istorex" "luci-app-istorex" "https://github.com/kenzok8/small-package"
-svn_export "main" "luci-app-quickstart" "luci-app-quickstart" "https://github.com/kenzok8/small-package"
-svn_export "main" "quickstart" "quickstart" "https://github.com/kenzok8/small-package"
 
 # Turbo ACC 网络加速
 git clone --depth 1 https://github.com/coolsnowwolf/luci
@@ -209,6 +190,9 @@ luci-app-adguardhome
 luci-app-netdata
 luci-app-aliddns
 luci-app-eqos
+luci-app-istorex
+luci-app-quickstart
+quickstart
 cpulimit
 luci-app-cpulimit
 luci-app-wrtbwmon
@@ -230,8 +214,6 @@ luci-app-wizard
 luci-app-oaf
 luci-app-smartinfo
 luci-app-autotimeset
-luci-app-istorex
-luci-app-quickstart
 luci-app-turboacc
 libcap
 EOF
@@ -262,6 +244,8 @@ cat >> README.md <<EOF
 ###### luci-app-netdata    #netdata信息监控
 ###### luci-app-aliddns    #aliddns
 ###### luci-app-eqos    #内网控速 内网IP限速工具
+###### luci-app-istorex    #istorex商店
+###### luci-app-quickstart    #istore quickstart首页
 ###### luci-app-cpulimit    #CPU性能限制
 ###### luci-app-wrtbwmon    #流量统计，替代luci-app-wrtbwmon，在固件状态栏显示
 ###### luci-app-advanced    #系统高级设置
@@ -280,8 +264,6 @@ cat >> README.md <<EOF
 ###### luci-app-oaf （OpenAppFilter）    #应用过滤 ，该模块只工作在路由模式， 旁路模式、桥模式不生效，还有和Turbo ACC 网络加速有冲突
 ###### luci-app-smartinfo    #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-autotimeset    #定时设置，替代luci-app-autoreboot
-###### luci-app-istorex    #istorex商店
-###### luci-app-quickstart    #istore quickstart首页
 ###### luci-app-turboacc    #Turbo ACC 网络加速
 #
 
