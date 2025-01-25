@@ -16,7 +16,7 @@ rm -rf luci
 
 git clone --depth 1 https://github.com/coolsnowwolf/packages
 mv -f packages/net/vlmcsd ./vlmcsd
-rm -rf luci
+rm -rf packages
 
 
 

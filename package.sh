@@ -80,6 +80,8 @@ mv -f openwrt-packages/luci-app-eqos ./luci-app-eqos
 mv -f openwrt-packages/luci-app-istorex ./luci-app-istorex
 mv -f openwrt-packages/luci-app-quickstart ./luci-app-quickstart
 mv -f openwrt-packages/quickstart ./quickstart
+mv -f openwrt-packages/luci-app-store ./luci-app-store
+mv -f openwrt-packages/luci-lib-taskd ./luci-lib-taskd
 rm -rf openwrt-packages
 
 git clone --depth 1 https://github.com/sirpdboy/sirpdboy-package

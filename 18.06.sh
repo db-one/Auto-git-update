@@ -13,7 +13,7 @@ rm -rf luci
 
 git clone --depth 1 https://github.com/coolsnowwolf/packages
 mv -f packages/net/vlmcsd ./vlmcsd
-rm -rf luci
+rm -rf packages
 
 # 一些依赖包
 git clone https://github.com/db-one/myautocore
