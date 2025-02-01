@@ -19,8 +19,8 @@ on:
         default: 'true'
         type: boolean
 
-#  schedule:
-#    - cron: 30 16 * * *
+  schedule:
+    - cron: 30 16 * * *
 
 env: 
   TZ: Asia/Shanghai
