@@ -82,6 +82,8 @@ mv -f openwrt-packages/luci-app-quickstart ./luci-app-quickstart
 mv -f openwrt-packages/quickstart ./quickstart
 mv -f openwrt-packages/luci-app-store ./luci-app-store
 mv -f openwrt-packages/luci-lib-taskd ./luci-lib-taskd
+mv -f openwrt-packages/luci-lib-xterm ./luci-lib-xterm
+mv -f openwrt-packages/taskd ./taskd
 rm -rf openwrt-packages
 
 git clone --depth 1 https://github.com/sirpdboy/sirpdboy-package
