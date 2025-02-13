@@ -20,7 +20,7 @@ on:
         type: boolean
 
   schedule:
-    - cron: 30 16 * * *
+    - cron: 30 5,16 * * *
 
 env: 
   TZ: Asia/Shanghai
