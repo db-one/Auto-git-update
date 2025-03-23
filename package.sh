@@ -60,11 +60,7 @@ git clone --depth 1 https://github.com/Lienol/openwrt-luci
 mv -f openwrt-luci/themes/luci-theme-material ./luci-theme-material
 rm -rf openwrt-luci
 
-git clone --depth 1 https://github.com/sirpdboy/sirpdboy-package
- mv -f sirpdboy-package/luci-theme-opentomcat ./luci-theme-opentomcat
- rm -rf sirpdboy-package
- 
- # ####
+# ####
 git clone https://github.com/jerrykuku/luci-app-argon-config
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
@@ -86,12 +82,6 @@ mv -f openwrt-packages/luci-lib-xterm ./luci-lib-xterm
 mv -f openwrt-packages/taskd ./taskd
 rm -rf openwrt-packages
 
-git clone --depth 1 https://github.com/sirpdboy/sirpdboy-package
-mv -f sirpdboy-package/luci-app-netdata ./luci-app-netdata
-mv -f sirpdboy-package/cpulimit ./cpulimit
-mv -f sirpdboy-package/luci-app-cpulimit ./luci-app-cpulimit
-rm -rf sirpdboy-package
-
 git clone --depth 1 https://github.com/firker/diy-ziyong
 mv -f diy-ziyong/luci-app-wrtbwmon-zh ./luci-app-wrtbwmon
 mv -f diy-ziyong/wrtbwmon ./wrtbwmon
@@ -99,11 +89,9 @@ rm -rf diy-ziyong
 
 git clone --depth 1 https://github.com/281677160/openwrt-package
 mv -f openwrt-package/luci-app-adguardhome ./luci-app-adguardhome
-mv -f openwrt-package/luci-app-advanced ./luci-app-advanced
 mv -f openwrt-package/luci-app-control-timewol ./luci-app-control-timewol
 mv -f openwrt-package/luci-app-control-weburl ./luci-app-control-weburl
 mv -f openwrt-package/luci-app-control-webrestriction ./luci-app-control-webrestriction
-mv -f openwrt-package/luci-app-socat ./luci-app-socat
 rm -rf openwrt-package
 
 git clone --depth 1 https://github.com/linkease/nas-packages-luci
@@ -147,7 +135,6 @@ sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/a
 sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial/css/style.css #Atmaterial主题输入框调大
 sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/css/style.css #Atmaterial主题输入框调大
 sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #Atmaterial主题输入框调大
-sed -i '1366,1369d' luci-theme-opentomcat/files/htdocs/css/style.css #OpenTomcat主题输入框调大
 
 # Neobird主题微调
 sed -i -e 's/shadowsocksr/openclash/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
@@ -183,7 +170,6 @@ helloworld
 luci-app-openclash
 luci-theme-atmaterial_new
 luci-theme-material
-luci-theme-opentomcat
 luci-app-argon-config
 luci-theme-infinityfreedom
 luci-theme-rosy
@@ -191,21 +177,16 @@ luci-theme-neobird
 luci-theme-design
 luci-app-design-config
 luci-app-adguardhome
-luci-app-netdata
 luci-app-aliddns
 luci-app-eqos
 luci-app-istorex
 luci-app-quickstart
 quickstart
-cpulimit
-luci-app-cpulimit
 luci-app-wrtbwmon
 wrtbwmon
-luci-app-advanced
 luci-app-control-timewol
 luci-app-control-weburl
 luci-app-control-webrestriction
-luci-app-socat
 luci-app-ddnsto
 ddnsto
 luci-app-ikoolproxy
@@ -235,7 +216,6 @@ cat >> README.md <<EOF
 ### 主题
 ###### luci-theme-atmaterial_new   #atmaterial-三合一主题
 ###### luci-theme-material   #material-主题
-###### luci-theme-opentomcat   #主题-opentomcat（仿kool固件主题）
 ###### luci-app-argon-config    #argon主题设置（编译时候选上,在固件的‘系统’里面）
 ###### luci-theme-infinityfreedom    #透明主题
 ###### luci-theme-rosy    #主题-rosy
@@ -245,18 +225,14 @@ cat >> README.md <<EOF
 #
 ###  插件
 ###### luci-app-adguardhome    #adguardhome
-###### luci-app-netdata    #netdata信息监控
 ###### luci-app-aliddns    #aliddns
 ###### luci-app-eqos    #内网控速 内网IP限速工具
 ###### luci-app-istorex    #istorex商店
 ###### luci-app-quickstart    #istore quickstart首页
-###### luci-app-cpulimit    #CPU性能限制
 ###### luci-app-wrtbwmon    #流量统计，替代luci-app-wrtbwmon，在固件状态栏显示
-###### luci-app-advanced    #系统高级设置
 ###### luci-app-control-timewol    #定时唤醒
 ###### luci-app-control-weburl    #网址过滤
 ###### luci-app-control-webrestriction    #访问限制
-###### luci-app-socat    #端口转发
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 ###### luci-app-ikoolproxy   #ikoolproxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-serverchan    #微信推送
