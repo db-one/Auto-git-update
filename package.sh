@@ -62,7 +62,6 @@ rm -rf openwrt-luci
 
 # ####
 git clone https://github.com/jerrykuku/luci-app-argon-config
-git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 git clone https://github.com/rosywrt/luci-theme-rosy
 git clone https://github.com/thinktip/luci-theme-neobird
 git clone https://github.com/db-one/luci-theme-design
@@ -71,7 +70,6 @@ git clone https://github.com/db-one/luci-app-design-config
 
 # 插件
 git clone --depth 1 https://github.com/kenzok8/openwrt-packages
-mv -f openwrt-packages/luci-app-aliddns ./luci-app-aliddns
 mv -f openwrt-packages/luci-app-eqos ./luci-app-eqos
 mv -f openwrt-packages/luci-app-istorex ./luci-app-istorex
 mv -f openwrt-packages/luci-app-quickstart ./luci-app-quickstart
@@ -104,7 +102,6 @@ rm -rf ddnsto-openwrt
 
 
 # ####
-git clone https://github.com/1wrt/luci-app-ikoolproxy
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/zzsj0928/luci-app-pushbot
 git clone https://github.com/pymumu/luci-app-smartdns -b lede
@@ -114,19 +111,6 @@ git clone https://github.com/destan19/OpenAppFilter luci-app-oaf
 git clone https://github.com/iamaluckyguy/luci-app-smartinfo
 git clone https://github.com/sirpdboy/luci-app-wizard
 git clone https://github.com/sirpdboy/luci-app-autotimeset
-
-
-# Turbo ACC 网络加速
-git clone --depth 1 https://github.com/coolsnowwolf/luci
-mv -f luci/applications/luci-app-turboacc ./luci-app-turboacc
-rm -rf luci
-
-
-# 一些依赖包
-git clone --depth 1 https://github.com/coolsnowwolf/lede
-mv -f lede/package/libs/libcap ./libcap
-rm -rf lede
-
 
 sed -i -e 's/stats refresh 30s/stats refresh 3s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为3秒
 sed -i 's@.*stats admin if TRUE*@#&@g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #去除haproxy控制台管理
@@ -171,13 +155,11 @@ luci-app-openclash
 luci-theme-atmaterial_new
 luci-theme-material
 luci-app-argon-config
-luci-theme-infinityfreedom
 luci-theme-rosy
 luci-theme-neobird
 luci-theme-design
 luci-app-design-config
 luci-app-adguardhome
-luci-app-aliddns
 luci-app-eqos
 luci-app-istorex
 luci-app-quickstart
@@ -189,7 +171,6 @@ luci-app-control-weburl
 luci-app-control-webrestriction
 luci-app-ddnsto
 ddnsto
-luci-app-ikoolproxy
 luci-app-serverchan
 luci-app-pushbot
 luci-app-smartdns
@@ -199,8 +180,6 @@ luci-app-wizard
 luci-app-oaf
 luci-app-smartinfo
 luci-app-autotimeset
-luci-app-turboacc
-libcap
 EOF
 
 # 获取二级目录并显示
@@ -217,7 +196,6 @@ cat >> README.md <<EOF
 ###### luci-theme-atmaterial_new   #atmaterial-三合一主题
 ###### luci-theme-material   #material-主题
 ###### luci-app-argon-config    #argon主题设置（编译时候选上,在固件的‘系统’里面）
-###### luci-theme-infinityfreedom    #透明主题
 ###### luci-theme-rosy    #主题-rosy
 ###### luci-theme-neobird    #主题-小清新 Neobird
 ###### luci-theme-design    #主题-design 基于Neobird修改
@@ -225,7 +203,6 @@ cat >> README.md <<EOF
 #
 ###  插件
 ###### luci-app-adguardhome    #adguardhome
-###### luci-app-aliddns    #aliddns
 ###### luci-app-eqos    #内网控速 内网IP限速工具
 ###### luci-app-istorex    #istorex商店
 ###### luci-app-quickstart    #istore quickstart首页
@@ -234,7 +211,6 @@ cat >> README.md <<EOF
 ###### luci-app-control-weburl    #网址过滤
 ###### luci-app-control-webrestriction    #访问限制
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
-###### luci-app-ikoolproxy   #ikoolproxy是基于koolproxyR Plus+重新整理而来
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-pushbot    #基于原版微信推送修改，支持更多协议
 ###### luci-app-smartdns    #smartdns DNS加速
@@ -244,7 +220,6 @@ cat >> README.md <<EOF
 ###### luci-app-oaf （OpenAppFilter）    #应用过滤 ，该模块只工作在路由模式， 旁路模式、桥模式不生效，还有和Turbo ACC 网络加速有冲突
 ###### luci-app-smartinfo    #磁盘监控 ，该工具帮助您通过S.M.A.R.T技术来监控您硬盘的健康状况
 ###### luci-app-autotimeset    #定时设置，替代luci-app-autoreboot
-###### luci-app-turboacc    #Turbo ACC 网络加速
 #
 
 
