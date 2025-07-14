@@ -120,6 +120,8 @@ sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial/css/
 sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/css/style.css #Atmaterial主题输入框调大
 sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #Atmaterial主题输入框调大
 
+wget -q https://gist.githubusercontent.com/puteulanus/1c180fae6bccd25e57eb6d30b7aa28aa/raw/istore_backend.lua -O luci-app-quickstart/luasrc/controller/istore_backend.lua --no-check-certificate # 修复quickstart首页温度显示异常
+
 # Neobird主题微调
 sed -i -e 's/shadowsocksr/openclash/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
 Neobird="luci-theme-neobird/htdocs/luci-static/neobird/css/style.css"
