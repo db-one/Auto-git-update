@@ -16,7 +16,6 @@ mv -f packages/net/vlmcsd ./vlmcsd
 rm -rf packages
 
 # 一些依赖包
-git clone https://github.com/db-one/myautocore
 
 
 sed -i 's@e5effd@f8fbfe@g' luci-theme-edge/htdocs/luci-static/edge/cascade.css #luci-theme-edge主题颜色微调
