@@ -17,6 +17,17 @@ if [ -n "$FOLDERS" ]; then  curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WOR
 # TG通知
 if [ -n "$FOLDERS" ]; then  curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫源码同步失败,分支:$package$matrix_target，失败列表:$FOLDERSX......"; else curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🎉源码同步成功,分支:$package$matrix_target......"; fi   >/dev/null 2>&1 && echo "ok..."
 
+
+# 搜索补丁 .rej 文件并将结果存储在变量中
+REJ_FILES=$(find . -type f -name "*.rej" | xargs | sed 's/ /,/g')
+# 判断变量值，如果有效发送通知
+if [ -n "$REJ_FILES" ]; then
+    # 推送信息
+    MESSAGE="发现被拒绝的补丁文件，需要手动处理：$REJ_FILES"
+    curl -s "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=$MESSAGE"
+    curl -s "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=$MESSAGE"
+fi
+
 # 删除对比更新目录列表
 rm -rf Update.md
 rm -rf UpdateList.md
