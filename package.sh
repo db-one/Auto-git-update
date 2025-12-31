@@ -92,14 +92,17 @@ mv -f openwrt-package/luci-app-control-weburl ./luci-app-control-weburl
 mv -f openwrt-package/luci-app-control-webrestriction ./luci-app-control-webrestriction
 rm -rf openwrt-package
 
+# ddnsto
 git clone --depth 1 https://github.com/linkease/nas-packages-luci
 mv -f nas-packages-luci/luci/luci-app-ddnsto ./luci-app-ddnsto
 rm -rf nas-packages-luci
-
 git clone --depth 1 https://github.com/linkease/ddnsto-openwrt
 mv -f ddnsto-openwrt/ddnsto ./ddnsto
 rm -rf ddnsto-openwrt
 
+# bandix流量监控
+git clone https://github.com/timsaya/luci-app-bandix
+git clone https://github.com/timsaya/openwrt-bandix
 
 # ####
 git clone https://github.com/tty228/luci-app-serverchan
@@ -172,6 +175,8 @@ luci-app-control-weburl
 luci-app-control-webrestriction
 luci-app-ddnsto
 ddnsto
+luci-app-bandix
+openwrt-bandix
 luci-app-serverchan
 luci-app-pushbot
 luci-app-smartdns
@@ -212,6 +217,7 @@ cat >> README.md <<EOF
 ###### luci-app-control-weburl    #网址过滤
 ###### luci-app-control-webrestriction    #访问限制
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
+###### luci-app-bandix    #OpenWrt 网络流量监控
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-pushbot    #基于原版微信推送修改，支持更多协议
 ###### luci-app-smartdns    #smartdns DNS加速
