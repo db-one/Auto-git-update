@@ -116,6 +116,10 @@ git clone https://github.com/sirpdboy/luci-app-wizard
 git clone https://github.com/sirpdboy/luci-app-autotimeset
 git clone https://github.com/NONGFAH/luci-app-athena-led
 
+chmod +x "luci-app-athena-led/root/usr/sbin/athena-led" # 设置luci-app-athena-led执行权限
+chmod +x "luci-app-athena-led/root/etc/init.d/athena_led" # 设置luci-app-athena-led执行权限
+wget -q https://gist.githubusercontent.com/db-one/8f0732ff4f06b301edb8a15c29f8d32b/raw/istore_backend.lua -O luci-app-quickstart/luasrc/controller/istore_backend.lua --no-check-certificate # 修复quickstart首页温度显示异常
+
 sed -i -e 's/stats refresh 30s/stats refresh 3s/g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #haproxy控制台刷新时间设置为3秒
 sed -i 's@.*stats admin if TRUE*@#&@g' passwall/luci-app-passwall/root/usr/share/passwall/app.sh #去除haproxy控制台管理
 
@@ -126,6 +130,7 @@ sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brow
 
 # luci-app-istoreX
 sed -i 's/+luci-app-store//g' luci-app-istorex/Makefile luci-app-quickstart/Makefile #删除luci-app-quickstart的商店依赖
+
 
 # Neobird主题微调
 sed -i -e 's/shadowsocksr/openclash/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
