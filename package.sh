@@ -129,8 +129,8 @@ sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/
 sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #Atmaterial主题输入框调大
 
 # luci-app-istoreX
+sed -i 's/+smartd //g; s/+mdadm //g' quickstart/Makefile #删除quickstart的插件依赖
 sed -i 's/+luci-app-store//g' luci-app-istorex/Makefile luci-app-quickstart/Makefile #删除luci-app-quickstart的商店依赖
-
 
 # Neobird主题微调
 sed -i -e 's/shadowsocksr/openclash/g' -e 's/admin">/flashops">/g' luci-theme-neobird/luasrc/view/themes/neobird/header.htm #Neobird主题链接地址
