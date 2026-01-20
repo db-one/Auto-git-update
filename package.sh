@@ -4,13 +4,13 @@
 # 新建目录
 mkdir passwall
 # 插件包
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages passwall/packages
+git clone --depth 1 https://github.com/Openwrt-Passwall/openwrt-passwall-packages passwall/packages
 # luci-app-passwall
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall
+git clone --depth 1 https://github.com/Openwrt-Passwall/openwrt-passwall
 mv -f openwrt-passwall/luci-app-passwall ./passwall/luci-app-passwall
 rm -rf openwrt-passwall
 # luci-app-passwall2
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2
+git clone --depth 1 https://github.com/Openwrt-Passwall/openwrt-passwall2
 mv -f openwrt-passwall2/luci-app-passwall2 ./passwall/luci-app-passwall2
 rm -rf openwrt-passwall2
 # helloworld
@@ -24,7 +24,7 @@ if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 4b2927affb0e178e166b0280634be23453a1cc9d
+  cd dbone-packages && git reset --hard f6128d1611e3cc85b1ecc62ea3dec79d1f9c80ae
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
@@ -34,7 +34,7 @@ if [ ! -d "passwall/luci-app-passwall2" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall2缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall2缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 4b2927affb0e178e166b0280634be23453a1cc9d
+  cd dbone-packages && git reset --hard f6128d1611e3cc85b1ecc62ea3dec79d1f9c80ae
   cd ../ && mkdir passwall
   mv -f dbone-packages/passwall/luci-app-passwall2 ./passwall/luci-app-passwall2
   rm -rf dbone-packages
@@ -44,7 +44,7 @@ if [ ! -d "luci-app-openclash" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫OpenClash缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫OpenClash缺失,从历史记录恢复......"
   git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard 4b2927affb0e178e166b0280634be23453a1cc9d
+  cd dbone-packages && git reset --hard f6128d1611e3cc85b1ecc62ea3dec79d1f9c80ae
   cd ../ && mkdir passwall
   mv -f dbone-packages/luci-app-openclash ./luci-app-openclash
   rm -rf dbone-packages
@@ -132,7 +132,7 @@ sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brow
 
 # luci-app-istoreX
 sed -i 's/+luci-app-store//g' luci-app-istorex/Makefile luci-app-quickstart/Makefile #删除luci-app-quickstart的商店依赖
-sed -i 's/+smartd //g; s/+mdadm //g; s/+smartmontools //g; s/+smartmontools-drivedb //g' quickstart/Makefile #删除quickstart的插件依赖
+# sed -i 's/+smartd //g; s/+mdadm //g; s/+smartmontools //g; s/+smartmontools-drivedb //g' quickstart/Makefile #删除quickstart的插件依赖
 sed -i '/entry({"admin", "nas", "raid"},/,/entry({"admin", "nas", "smart"},/d' luci-app-quickstart/luasrc/controller/quickstart.lua #删除quickstart的磁盘菜单
 wget -q https://gist.githubusercontent.com/db-one/8f0732ff4f06b301edb8a15c29f8d32b/raw/istore_backend.lua -O luci-app-quickstart/luasrc/controller/istore_backend.lua --no-check-certificate # 修复quickstart首页温度显示异常
 
