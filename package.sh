@@ -23,9 +23,7 @@ git clone -b master --depth 1 https://github.com/vernesong/OpenClash && mv -f Op
 if [ ! -d "passwall/luci-app-passwall" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall缺失,从历史记录恢复......"
-  git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard f6128d1611e3cc85b1ecc62ea3dec79d1f9c80ae
-  cd ../ && mkdir passwall
+  git clone --depth 1 https://github.com/db-one/dbone-packages -b 23.05
   mv -f dbone-packages/passwall/luci-app-passwall ./passwall/luci-app-passwall
   rm -rf dbone-packages
 fi
@@ -33,9 +31,7 @@ fi
 if [ ! -d "passwall/luci-app-passwall2" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫Passwall2缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫Passwall2缺失,从历史记录恢复......"
-  git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard f6128d1611e3cc85b1ecc62ea3dec79d1f9c80ae
-  cd ../ && mkdir passwall
+  git clone --depth 1 https://github.com/db-one/dbone-packages -b 23.05
   mv -f dbone-packages/passwall/luci-app-passwall2 ./passwall/luci-app-passwall2
   rm -rf dbone-packages
 fi
@@ -43,9 +39,7 @@ fi
 if [ ! -d "luci-app-openclash" ];then
   curl "http://$WECHAT_WORK_URL/push?token=$WECHAT_WORK_TOKEN&message=🚫OpenClash缺失,从历史记录恢复......"
   curl "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" -d "chat_id=$TELEGRAM_CHAT_ID&text=🚫OpenClash缺失,从历史记录恢复......"
-  git clone https://github.com/db-one/dbone-packages -b 18.06
-  cd dbone-packages && git reset --hard f6128d1611e3cc85b1ecc62ea3dec79d1f9c80ae
-  cd ../ && mkdir passwall
+  git clone --depth 1 https://github.com/db-one/dbone-packages -b 23.05
   mv -f dbone-packages/luci-app-openclash ./luci-app-openclash
   rm -rf dbone-packages
 fi
