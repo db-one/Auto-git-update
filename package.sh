@@ -46,10 +46,6 @@ fi
 
 # 主题
 # 
-git clone --depth 1 https://github.com/kenzok8/openwrt-packages
-mv -f openwrt-packages/luci-theme-atmaterial_new ./luci-theme-atmaterial_new
-rm -rf openwrt-packages
-
 git clone --depth 1 https://github.com/Lienol/openwrt-luci
 mv -f openwrt-luci/themes/luci-theme-material ./luci-theme-material
 rm -rf openwrt-luci
@@ -120,9 +116,6 @@ sed -i 's@.*stats admin if TRUE*@#&@g' passwall/luci-app-passwall/root/usr/share
 
 # 主题
 sed -i 's/"Argon 主题设置"/"Argon设置"/g' luci-app-argon-config/po/zh-cn/argon-config.po
-sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial/css/style.css #Atmaterial主题输入框调大
-sed -i '1226,1229d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_red/css/style.css #Atmaterial主题输入框调大
-sed -i '1241,1244d' luci-theme-atmaterial_new/htdocs/luci-static/atmaterial_Brown/css/style.css #Atmaterial主题输入框调大
 
 # luci-app-istoreX
 sed -i 's/+luci-app-store//g' luci-app-istorex/Makefile luci-app-quickstart/Makefile #删除luci-app-quickstart的商店依赖
@@ -163,7 +156,6 @@ luci-app-passwall
 luci-app-passwall2
 helloworld
 luci-app-openclash
-luci-theme-atmaterial_new
 luci-theme-material
 luci-app-argon-config
 luci-theme-rosy
@@ -207,7 +199,6 @@ cat >> README.md <<EOF
 ###### luci-app-openclash
 #
 ### 主题
-###### luci-theme-atmaterial_new   #atmaterial-三合一主题
 ###### luci-theme-material   #material-主题
 ###### luci-app-argon-config    #argon主题设置（编译时候选上,在固件的‘系统’里面）
 ###### luci-theme-rosy    #主题-rosy
