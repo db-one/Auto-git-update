@@ -135,7 +135,7 @@ patch -p0 luci-theme-neobird/htdocs/luci-static/neobird/js/script.js ../patch.fi
 
 # OpenClash调整
 openclash="luci-app-openclash/root/etc/uci-defaults/luci-openclash"
-patch -p0 luci-app-openclash/luasrc/model/cbi/openclash/settings.lua ../patch.file/luci-app-openclash.settings.lua.patch #OpenClash删除机场登录
+# patch -p0 luci-app-openclash/luasrc/model/cbi/openclash/settings.lua ../patch.file/luci-app-openclash.settings.lua.patch #OpenClash删除机场登录
 # sed -i '/---- dlercloud/,/o.value = font_red..bold_on..translate("Account not logged in")..bold_off..font_off/{ /o.value = font_red..bold_on..translate("Account not logged in")..bold_off..font_off/!d; N; d; }' luci-app-openclash/luasrc/model/cbi/openclash/settings.lua #OpenClash删除机场登录
 sed -i '/openclash.config.enable/{N;d;}' $openclash #OpenClash恢复更新系统开机自启动
 sed -i '/exit/i\uci -q set openclash.config.dashboard_password=""' $openclash #禁用控制面板登录密钥
