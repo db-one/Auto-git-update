@@ -6,9 +6,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon -b 18.06
 
 # 插件
 git clone --depth 1 https://github.com/coolsnowwolf/luci
-mv -f luci/applications/luci-app-v2ray-server ./luci-app-v2ray-server
 mv -f luci/applications/luci-app-vlmcsd ./luci-app-vlmcsd
-mv -f luci/applications/luci-app-filetransfer ./luci-app-filetransfer
 rm -rf luci
 
 git clone --depth 1 https://github.com/coolsnowwolf/packages
@@ -25,10 +23,8 @@ sed -i 's#223, 56, 18, 0.04#223, 56, 18, 0.02#g' luci-theme-edge/htdocs/luci-sta
 cat >> Update.md <<EOF
 luci-theme-edge
 luci-theme-argon
-luci-app-v2ray-server
 luci-app-vlmcsd
 vlmcsd
-luci-app-filetransfer
 EOF
 
 
@@ -45,9 +41,7 @@ cat >> README.md <<EOF
 ###### luci-theme-edge    #主题-edge
 ###### luci-theme-argon    #新的argon主题
 #
-###### luci-app-v2ray-server   #V2ray服务端
 ###### luci-app-vlmcsd          #KMS激活服务器
-###### luci-app-filetransfer   #文件传输
 #
 ###  依赖
 
