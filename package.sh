@@ -94,6 +94,9 @@ rm -rf ddnsto-openwrt
 git clone https://github.com/timsaya/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix
 
+# luci-app-quickfile 文件管理器
+git clone https://github.com/sbwml/luci-app-quickfile
+
 # ####
 git clone https://github.com/tty228/luci-app-serverchan
 git clone https://github.com/zzsj0928/luci-app-pushbot
@@ -176,6 +179,7 @@ luci-app-ddnsto
 ddnsto
 luci-app-bandix
 openwrt-bandix
+luci-app-quickfile
 luci-app-serverchan
 luci-app-pushbot
 luci-app-smartdns
@@ -217,6 +221,7 @@ cat >> README.md <<EOF
 ###### luci-app-control-webrestriction    #访问限制
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
 ###### luci-app-bandix    #OpenWrt 网络流量监控
+###### luci-app-quickfile    #quickfile文件管理器
 ###### luci-app-serverchan    #微信推送
 ###### luci-app-pushbot    #基于原版微信推送修改，支持更多协议
 ###### luci-app-smartdns    #smartdns DNS加速
