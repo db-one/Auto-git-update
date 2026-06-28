@@ -90,6 +90,10 @@ git clone --depth 1 https://github.com/linkease/ddnsto-openwrt
 mv -f ddnsto-openwrt/ddnsto ./ddnsto
 rm -rf ddnsto-openwrt
 
+git clone --depth 1 https://github.com/VIKINGYFY/immortalwrt
+mv -f immortalwrt/package/emortal/luci-app-athena-led ./luci-app-athena-led
+rm -rf immortalwrt
+
 # bandix流量监控
 git clone https://github.com/timsaya/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix
@@ -173,6 +177,7 @@ luci-app-control-weburl
 luci-app-control-webrestriction
 luci-app-ddnsto
 ddnsto
+luci-app-athena-led
 luci-app-bandix
 openwrt-bandix
 luci-app-quickfile
@@ -216,6 +221,7 @@ cat >> README.md <<EOF
 ###### luci-app-control-weburl    #网址过滤
 ###### luci-app-control-webrestriction    #访问限制
 ###### luci-app-ddnsto    #小宝开发的DDNS.to内网穿透
+###### luci-app-athena-led    #京东云雅典娜AX6600LED屏幕控制
 ###### luci-app-bandix    #OpenWrt 网络流量监控
 ###### luci-app-quickfile    #quickfile文件管理器
 ###### luci-app-serverchan    #微信推送
