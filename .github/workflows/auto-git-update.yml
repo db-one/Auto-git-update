@@ -42,7 +42,7 @@ jobs:
 
     steps:
     - name: 检查文件
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: 初始化系统环境
       env:
