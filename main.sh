@@ -10,10 +10,6 @@ mkdir -p 风扇控制
 curl -fsSL https://raw.githubusercontent.com/Rem0o/FanControl.Releases/master/FanControl.zip > 风扇控制/FanControl.zip
 curl -fsSL https://raw.githubusercontent.com/Rem0o/FanControl.Releases/master/version.json > 风扇控制/版本.json
 
-mkdir -p 微软TTS
-svn co https://github.com/ag2s20150909/TTS/trunk/release 微软TTS
-rm -r 微软TTS/TTS_release*.apk.idsig
-
 # Fail2ban SSH Docker
 git clone https://github.com/crazy-max/docker-fail2ban Fail2ban-SSH-Docker
 
@@ -31,16 +27,16 @@ git clone https://github.com/youshandefeiyang/sub-web-modify sub-web-modify
 # CloudflareST
 # X86-64版本
 mkdir -p CloudflareST
-wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_amd64.tar.gz
-tar -zxf CloudflareST_linux_amd64.tar.gz -C ./CloudflareST
+wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/cfst_linux_amd64.tar.gz
+tar -zxf cfst_linux_amd64.tar.gz -C ./CloudflareST
 mv -f CloudflareST/CloudflareST ./CloudflareST/CloudflareST_amd64
-rm -r CloudflareST_linux_amd64.tar.gz
+rm -r cfst_linux_amd64.tar.gz
 # ARM64版本
 mkdir -p CloudflareST_arm64
-wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_arm64.tar.gz
-tar -zxf CloudflareST_linux_arm64.tar.gz -C ./CloudflareST_arm64
+wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/cfst_linux_arm64.tar.gz
+tar -zxf cfst_linux_arm64.tar.gz -C ./CloudflareST_arm64
 mv -f CloudflareST_arm64/CloudflareST ./CloudflareST/CloudflareST_arm64
-rm -r CloudflareST_linux_arm64.tar.gz CloudflareST_arm64
+rm -r cfst_linux_arm64.tar.gz CloudflareST_arm64
 
 
 cat >> README.md <<EOF
