@@ -26,17 +26,16 @@ git clone https://github.com/youshandefeiyang/sub-web-modify sub-web-modify
 
 # CloudflareST
 # X86-64版本
-mkdir -p CloudflareST
 wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/cfst_linux_amd64.tar.gz
-tar -zxf cfst_linux_amd64.tar.gz -C ./CloudflareST
-mv -f CloudflareST/CloudflareST ./CloudflareST/CloudflareST_amd64
-rm -r cfst_linux_amd64.tar.gz
+tar -zxf cfst_linux_amd64.tar.gz
+mv -f cfst_linux_amd64 CloudflareST
+mv -f CloudflareST/cfst ./CloudflareST/cfst_amd64
+rm -f cfst_linux_amd64.tar.gz
 # ARM64版本
-mkdir -p CloudflareST_arm64
 wget https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/cfst_linux_arm64.tar.gz
-tar -zxf cfst_linux_arm64.tar.gz -C ./CloudflareST_arm64
-mv -f CloudflareST_arm64/CloudflareST ./CloudflareST/CloudflareST_arm64
-rm -r cfst_linux_arm64.tar.gz CloudflareST_arm64
+tar -zxf cfst_linux_arm64.tar.gz
+mv -f cfst_linux_arm64/cfst ./CloudflareST/cfst_arm64
+rm -rf cfst_linux_arm64.tar.gz cfst_linux_arm64
 
 
 cat >> README.md <<EOF
